@@ -72,14 +72,14 @@ function WidadEllya(props) {
         }
 
         if (!empty) {
-            axios.put(`https://my-json-server.typicode.com/naufalwdd/resepsi-kami/data/${page_owner}`, req_body).then(res => {
+            axios.put(`https://my-json-server.typicode.com/naufalwdd/json-server/data/${page_owner}`, req_body).then(res => {
                 alert('Pesan Berhasil Dikirim')
                 setPresence(res.data.list)
             })
         }
 
         else {
-            axios.post(`https://my-json-server.typicode.com/naufalwdd/resepsi-kami/data/`, req_body).then(res => {
+            axios.post(`https://my-json-server.typicode.com/naufalwdd/json-server/data/`, req_body).then(res => {
                 alert('Pesan Berhasil Dikirim')
                 setPresence(res.data.list)
             })
@@ -96,7 +96,7 @@ function WidadEllya(props) {
         var url_arr = current_url.split('/')
         var page_owner = url_arr[url_arr.length - 1]
 
-        axios.get(`https://my-json-server.typicode.com/naufalwdd/resepsi-kami/data/${page_owner}`).then(res => {
+        axios.get(`https://my-json-server.typicode.com/naufalwdd/json-server/data/${page_owner}`).then(res => {
             console.log(res.data);
             if (res.data == null) {
                 return

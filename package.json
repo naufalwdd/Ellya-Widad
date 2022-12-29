@@ -44,10 +44,5 @@
   },
   "devDependencies": {
     "react-router-dom": "^6.5.0"
-  },
-  "browser": {
-    "fs": false,
-    "os": false,
-    "path": false
   }
 }
