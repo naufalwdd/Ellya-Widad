@@ -1,0 +1,32 @@
+{
+    "data": {
+        "Widad-Ellya": [
+            {
+                "nama": "Dhifa",
+                "kehadiran": true,
+                "jumlah": 2,
+                "message": "selamat bestie!"
+            },
+            {
+                "nama": "Rio",
+                "kehadiran": false,
+                "jumlah": 3,
+                "message": "barakallaah, selamat menempuh hidup baru"
+            }
+        ],
+        "Tareqi-Dhifa" : [
+            {
+                "nama": "Widad",
+                "kehadiran": true,
+                "jumlah": 2,
+                "message": "selamat mantap-mantap"
+            },
+            {
+                "nama": "Ellya",
+                "kehadiran": true,
+                "jumlah": 3,
+                "message": "barakallaah eqii!"
+            }
+        ]
+    }
+}

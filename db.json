@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "id": "Tareqi-Dhifa",
+      "owner": "Tareqi-Dhifa",
+      "list": [
+        {
+          "nama": "Widad",
+          "kehadiran": true,
+          "jumlah": 2,
+          "message": "selamat mantap-mantap"
+        },
+        {
+          "nama": "Ellya",
+          "kehadiran": true,
+          "jumlah": 3,
+          "message": "barakallaah eqii!"
+        }
+      ]
+    },
+    {
+      "id": "Widad-Ellya",
+      "owner": "Widad-Ellya",
+      "list": [
+        {
+          "nama": "Dhifa",
+          "kehadiran": true,
+          "jumlah": "2",
+          "message": "Selamat bestie!"
+        },
+        {
+          "nama": "Kanjut",
+          "kehadiran": true,
+          "jumlah": "1",
+          "message": "Test"
+        },
+        {
+          "nama": "Wafda",
+          "kehadiran": false,
+          "jumlah": "2",
+          "message": "Mantap brodi"
+        },
+        {
+          "nama": "Baban",
+          "kehadiran": true,
+          "jumlah": "1",
+          "message": "Alhamdulillaah"
+        }
+      ]
+    }
+  ]
+}

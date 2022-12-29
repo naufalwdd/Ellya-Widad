@@ -1,0 +1,786 @@
+.main_page_wrapper {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+}
+
+.popup_content {
+    position: absolute;
+    height: 100%;
+    width: calc(100vw + 16px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000bf;
+    top: 0;
+    z-index: 1;
+}
+
+/* .cover {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -2;
+    object-fit: scale-down;
+} */
+
+.invitation {
+    width: 175px;
+    font-weight: 'Lato';
+    font-weight: 700;
+    font-style: italic;
+    background-color: #efc920;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    height: 50px;
+    font-size: calc(10px + 2vmin);
+}
+
+.invitation:hover {
+    cursor: pointer;
+    background-color: #ae9112;
+}
+
+.greeting-content {
+    min-height: 16.66%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.countdown_content {
+    min-height: 16.66%;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.bridegroom_content {
+    min-height: 16.66%;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.location_content {
+    min-height: 16.66%;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.guest_content {
+    width: 100vw;
+    min-height: 16.66%;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ucapan_content {
+    min-height: 16.7%;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.date_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.date {
+    font-family: 'Rouge Script';
+    font-size: calc(24px + 3vmin);
+    color: #23822D;
+}
+
+.greeting {
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: calc(6px + 3vmin);
+}
+
+.name_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    border: 8px solid #E1DFC3;
+    width: calc(60vw + 3vmin);
+    height: calc(60vw + 3vmin);
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.name_box label {
+    font-family: 'Rouge Script' !important;
+    font-size: calc(42px + 3vmin);
+}
+
+.frame_wrapper1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.frame_wrapper2 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.frame_wrapper3 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.frame_wrapper4 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.top_right {
+    width: calc(23vw + 3vmin);
+}
+
+.top_left {
+    width: calc(13vw + 3vmin);
+}
+
+.bottom_right {
+    width: calc(14vw + 3vmin);
+}
+
+.bottom_left {
+    width: calc(14vw + 3vmin);
+}
+
+.component_title {
+    font-family: 'Rouge Script';
+    font-size: calc(64px + 3vmin);
+    margin-bottom: 10px;
+}
+
+.page_desc {
+    font-family: 'Lato';
+    font-size: calc(4px + 3vmin);
+    text-align: center;
+    font-style: italic;
+    width: 80vw;
+}
+
+.groom_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 80vw;
+}
+
+.location_img {
+    width: 24px;
+}
+
+.bridegroom_content .groom_content {
+    font-family: 'Lato';
+}
+
+.groom_content .bridegroom_name {
+    font-family: 'Rouge Script';
+    font-size: calc(24px + 3vmin);
+}
+
+.groom_content .bridegroom_fullname {
+    font-size: calc(4px + 2.5vmin);
+    color: #23822D;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.groom_content .bridegroom_desc {
+    font-size: calc(6px + 2vmin);
+    text-align: center;
+    margin-top: 5px;
+}
+
+#bold {
+    font-weight: 700;
+}
+
+.social_media {
+    display: flex;
+    margin-top: 10px;
+}
+
+.social_media a {
+    text-decoration: none;
+    margin-left: 5px;
+    font-weight: 700;
+    font-family: 'Lato';
+    padding: 2.5px;
+    font-size: calc(2px + 2vmin);
+    color: black;
+}
+
+.social_media a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.location_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    /* border: 1px solid #23822D; */
+    border-radius: 25px;
+    width: 35vw;
+    padding: 20px;
+    font-family: 'Lato';
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.location_card label {
+    font-style: italic;
+}
+
+.mapouter {
+    width: 50vw;
+    height:350px;
+}
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    /* width:100%; */
+    height:350px;
+    border-radius: 16px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.gmap_iframe {
+    height:350px!important;
+}
+
+.map_detail_container {
+    width: calc(50vw + 2vmin + 40px);
+}
+
+.map_detail_container .map-detail {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Rouge Script';
+    font-size: calc(24px + 3vmin);
+    text-align: center;
+}
+
+.see_map {
+    height: 35px;
+    width: 100px;
+    font-family: 'Lato';
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #23822D;
+    font-size: 14px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.see_map:hover {
+    background-color: #1b6022;
+    cursor: pointer;
+}
+
+.location_address {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.guest_card {
+    width: calc(30vw);
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px 15px 0 0;
+    height: 54vh;
+    padding: 20px;
+}
+
+.input_section {
+    display: flex;
+    flex-direction: column; 
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+.guest_card label {
+    font-family: 'Lato';
+    font-weight: 700;
+    font-style: italic;
+}
+
+.input_section input, .input_section textarea {
+    background: #FFFFFF;
+    border: 2px solid #E4E6E9;
+    border-radius: 10px;
+    height: 30px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Lato';
+    font-size: 14px;
+    /* padding-top: 10px; */
+}
+
+.input_section textarea {
+    padding-top: 10px;
+}
+
+.input_section textarea::placeholder {
+    font-family: 'Lato';
+    font-size: 14px;
+}
+
+.input_section #pray {
+    height: 200px;
+}
+
+.input_section_double {
+    display: flex;
+}
+
+.input_section_double select {
+    background: #FFFFFF;
+    border: 2px solid #E4E6E9;
+    border-radius: 10px;
+    height: 33px;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+}
+
+#input_sec {
+    width: 50%;
+}
+
+option {
+    font-family: 'Lato';
+}
+
+.btn_wrapper {
+    width: calc(30vw + 40px);
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.btn_wrapper button {
+    background-color: #23822D;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 0 0 15px 15px;
+    color: white;
+    font-weight: 700;
+    font-family: 'Lato';
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn_wrapper button:hover {
+    cursor: pointer;
+    background-color: #1c6423;
+}
+
+.message_card {
+    box-sizing: border-box;
+    width: 40vw;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    padding: 20px;
+    height: 75vh;
+    overflow-y: auto;
+}
+
+.msg {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.message_list {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.message_list img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.msg_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.msg_header .guest_name {
+    font-weight: 700;
+    font-family: 'Lato';
+    margin: 0;
+}
+
+.msg_header .presence {
+    font-weight: 700;
+    font-size: 12px;
+    font-family: 'Lato';
+    margin: 0;
+    background-color: #DCFCE7;
+    color: #36AD5F;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+
+.msg_header .absence {
+    font-weight: 700;
+    font-size: 12px;
+    font-family: 'Lato';
+    margin: 0;
+    background-color: #FFD8D8;
+    color: #C92323;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+
+.msg .message_val {
+    margin: 0;
+    margin-top: 10px;
+    font-family: 'Lato';
+    font-size: 14px;
+    /* font-weight: 700; */
+}
+
+@media only screen and (min-width: 1366px) {
+    .name_box {
+        width: calc(20vw + 3vmin);
+        height: calc(20vw + 3vmin);
+    }
+
+    .invitation {
+        font-size: calc(4px + 2vmin);
+        width: 200px;
+        height: 56px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .guest_card {
+        width: calc(75vw + 2vmin);
+    }
+
+    .guest_card label {
+        font-size: 18px;
+    }
+
+    .input_section input {
+        height: 40px;
+        padding-top: 0px;
+    }
+
+    .input_section select {
+        height: 46px;
+    }
+
+    .btn_wrapper {
+        width: calc(75vw + 2vmin + 40px);
+    }
+
+    .btn_wrapper button {
+        height: 46px;
+        font-size: 16px;
+    }
+
+    .invitation {
+        font-size: calc(8px + 2vmin);
+        width: 220px;
+        height: 56px;
+    }
+
+    .see_map {
+        width: 148px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+
+    .location_card {
+        width: 70vw;
+    }
+
+    .mapouter {
+        width: calc(70vw + 40px);
+    }
+
+    .message_card {
+        box-sizing: border-box;
+        width: 85vw;
+        background-color: white;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 16px;
+        padding: 20px;
+        height: 80vh;
+        overflow-y: auto;
+    }
+    
+    .msg {
+        box-sizing: border-box;
+        width: 100%;
+        background-color: #EEEEEE;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    
+    .message_list {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    
+    .message_list img {
+        width: 40px;
+        height: 40px;
+        margin-right: 12px;
+    }
+    
+    .msg_header {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .msg_header .guest_name {
+        font-weight: 700;
+        font-family: 'Lato';
+        margin: 0;
+    }
+    
+    .msg_header .presence {
+        font-weight: 700;
+        font-size: 12px;
+        font-family: 'Lato';
+        margin: 0;
+        background-color: #DCFCE7;
+        color: #36AD5F;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 5px;
+    }
+    
+    .msg_header .absence {
+        font-weight: 700;
+        font-size: 12px;
+        font-family: 'Lato';
+        margin: 0;
+        background-color: #FFD8D8;
+        color: #C92323;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 5px;
+    }
+    
+    .msg .message_val {
+        margin: 0;
+        margin-top: 5px;
+        font-family: 'Lato';
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width: 420px) {
+    .top_right {
+        width: calc(40vw + 3vmin);
+    }
+
+    .top_left {
+        position: sticky;
+        width: calc(20vw + 3vmin);
+    }
+
+    .bottom_right {
+        position: sticky;
+        width: calc(30vw + 3vmin);
+    }
+    
+    .bottom_left {
+        position: sticky;
+        width: calc(25vw + 3vmin);
+    }
+
+    .component_title {
+        font-size: calc(42px + 3vmin);
+    }
+
+    .social_media a {
+        font-size: calc(6px + 2vmin);
+    }
+
+    .location_card {
+        width: 70vw;
+    }
+
+    .see_map {
+        width: 125px;
+        height: 36px;
+        border-radius: 10px;
+    }
+
+    .mapouter {
+        width: 90vw;
+    }
+
+    .guest_card {
+        width: calc(75vw + 2vmin);
+    }
+
+    .invitation {
+        font-size: calc(10px + 2vmin);
+        width: 220px;
+        height: 56px;
+    }
+
+    .location_card label {
+        font-size: 16px;
+    }
+
+    .location_card .location_address {
+        font-size: 20px;
+    }
+
+    .input_section input {
+        height: 40px;
+        padding-top: 0px;
+    }
+
+    .input_section textarea {
+        font-size: 16px;
+    }
+
+    .message_card {
+        box-sizing: border-box;
+        width: 85vw;
+        background-color: white;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 16px;
+        padding: 12px;
+        height: 80vh;
+        overflow-y: auto;
+    }
+    
+    .msg {
+        box-sizing: border-box;
+        width: 100%;
+        background-color: #EEEEEE;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    
+    .message_list {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    
+    .message_list img {
+        width: 40px;
+        height: 40px;
+        margin-right: 12px;
+    }
+    
+    .msg_header {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .msg_header .guest_name {
+        font-weight: 700;
+        font-family: 'Lato';
+        margin: 0;
+    }
+    
+    .msg_header .presence {
+        font-weight: 700;
+        font-size: 12px;
+        font-family: 'Lato';
+        margin: 0;
+        background-color: #DCFCE7;
+        color: #36AD5F;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 5px;
+    }
+    
+    .msg_header .absence {
+        font-weight: 700;
+        font-size: 12px;
+        font-family: 'Lato';
+        margin: 0;
+        background-color: #FFD8D8;
+        color: #C92323;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 5px;
+    }
+    
+    .msg .message_val {
+        margin: 0;
+        margin-top: 5px;
+        font-family: 'Lato';
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,67 @@
+.timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+}
+
+.countdown_child {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer .countdown_title {
+    font-family: 'Rouge Script';
+    font-size: calc(64px + 3vmin);
+    margin-bottom: 10px;
+}
+
+.countdown_child label {
+    font-family: 'Lato';
+    font-size: calc(22px + 3vmin);
+}
+
+.countdown_child .content_label {
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 420px) {
+    .timer .countdown_title {
+        font-size: calc(42px + 3vmin);
+    }
+
+    .countdown_child label {
+        font-size: calc(16px + 3vmin);
+    }
+
+    .countdown_child .title_label {
+        font-size: calc(8px + 3vmin);
+    }
+    
+    .countdown_wrapper {
+        width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .countdown_child label {
+        font-size: calc(16px + 3vmin);
+    }
+
+    .countdown_child .title_label {
+        font-size: calc(8px + 3vmin);
+    }
+    
+    .countdown_wrapper {
+        width: 70vw;
+    }
+}
