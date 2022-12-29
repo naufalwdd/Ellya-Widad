@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/resepsi-kami/static/css/main.536451e9.css",
-    "main.js": "/resepsi-kami/static/js/main.5ec390a8.js",
+    "main.js": "/resepsi-kami/static/js/main.a3126b83.js",
     "static/js/787.342f8852.chunk.js": "/resepsi-kami/static/js/787.342f8852.chunk.js",
     "static/media/di-sepertiga-malam.mp3": "/resepsi-kami/static/media/di-sepertiga-malam.83a1c48fe990bf4f08aa.mp3",
     "static/media/bottom-right-frame.png": "/resepsi-kami/static/media/bottom-right-frame.ad541ad4e3e80b3456b8.png",
@@ -13,11 +13,11 @@
     "index.html": "/resepsi-kami/index.html",
     "static/media/location.svg": "/resepsi-kami/static/media/location.2f059afe05723edb3a730cdeb23c04e4.svg",
     "main.536451e9.css.map": "/resepsi-kami/static/css/main.536451e9.css.map",
-    "main.5ec390a8.js.map": "/resepsi-kami/static/js/main.5ec390a8.js.map",
+    "main.a3126b83.js.map": "/resepsi-kami/static/js/main.a3126b83.js.map",
     "787.342f8852.chunk.js.map": "/resepsi-kami/static/js/787.342f8852.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.536451e9.css",
-    "static/js/main.5ec390a8.js"
+    "static/js/main.a3126b83.js"
   ]
 }
