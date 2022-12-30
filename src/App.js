@@ -7,7 +7,7 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route exact path="/resepsi-kami" element={<MainPage />} />
+                <Route path="/resepsi-kami" element={<MainPage />} />
                 <Route path="/resepsi-kami/Widad-Ellya" element={<WidadEllya />} />
                 <Route path="/resepsi-kami/Fulan-Fulanah" element={<FulanFulanah />} />
             </Routes>
