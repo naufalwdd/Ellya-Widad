@@ -16,7 +16,6 @@ function WidadEllya(props) {
     var [isPlaying, setIsPlaying] = useState(true)
     var [presence, setPresence] = useState([])
     var [mapShown, setMapShown] = useState(false)
-    var [pageOwner, setPageOwner] = useState('')
 
     const ClosePopupAndPlayMusic = () => {
         document.getElementById('popup_content').style.visibility = 'hidden'
@@ -35,81 +34,6 @@ function WidadEllya(props) {
         window.scrollBy(0,200)
     }
 
-    const SaveMessage = () => {
-        var empty = true
-        if (presence.length > 0) {
-            empty = false
-        }
-
-        var nama = document.getElementById('name_input').value
-        var kehadiran = document.getElementById('presence_input').value == 'ya' ? true : false
-        var jumlah = document.getElementById('jumlah_input').value
-        var message = document.getElementById('pray').value
-
-        if (nama == '') {
-            alert('Silakan isi nama terlebih dahulu')
-            return
-        }
-
-        if (message == '') {
-            alert('Ucapan tidak boleh kosong')
-            return
-        }
-
-        var new_data = {nama: nama, kehadiran: kehadiran, jumlah: jumlah, message: message}
-        var new_presence = []
-        var new_presence = presence
-        new_presence.push(new_data)
-
-        var current_url = document.URL
-        var url_arr = current_url.split('/')
-        var page_owner = url_arr[url_arr.length - 1]
-
-        var req_body = {
-            "id": page_owner,
-            "owner": page_owner,
-            "list": new_presence
-        }
-
-        if (!empty) {
-            axios.put(`https://my-json-server.typicode.com/naufalwdd/json-server/data/${page_owner}`, req_body).then(res => {
-                alert('Pesan Berhasil Dikirim')
-                setPresence(res.data.list)
-            })
-        }
-
-        else {
-            axios.post(`https://my-json-server.typicode.com/naufalwdd/json-server/data/`, req_body).then(res => {
-                alert('Pesan Berhasil Dikirim')
-                setPresence(res.data.list)
-            })
-        }
-
-        document.getElementById('name_input').value = ''
-        document.getElementById('presence_input').value = 'ya'
-        document.getElementById('jumlah_input').value = 1
-        document.getElementById('pray').value = ''
-    }
-
-    useEffect(() => {
-        var current_url = document.URL
-        var url_arr = current_url.split('/')
-        var page_owner = url_arr[url_arr.length - 1]
-
-        axios.get(`https://my-json-server.typicode.com/naufalwdd/json-server/data/${page_owner}`).then(res => {
-            console.log(res.data);
-            if (res.data == null) {
-                return
-            }
-
-            if (res.data.list.length == 0) {
-                return
-            }
-
-            setPresence(res.data.list)
-        })
-    },[])
-
     return(        
         <div className="main_page_wrapper" id="main_page_wrapper">
             <div className="popup_content" id="popup_content">
@@ -117,13 +41,9 @@ function WidadEllya(props) {
             </div>
             <Sound
                 url={SepertigaMalam}
-                playStatus={isPlaying == '1' ? Sound.status.PLAYING : Sound.status.STOPPED}
+                playStatus={isPlaying ? Sound.status.PLAYING : Sound.status.STOPPED}
             ></Sound>
             <div className="greeting-content">
-                <div className="date_title">
-                    {/* <label className="date">Saturday, 4<sup>th</sup> March 2023</label> */}
-                    {/* <label className="date">The Wedding Of</label> */}
-                </div>
                 <div className="name_box">
                     <label>Ellya</label>
                     <label>&</label>
@@ -222,7 +142,7 @@ function WidadEllya(props) {
                     </div>
                 </div>
                 <div className="btn_wrapper">
-                    <button onClick={SaveMessage}>Kirim</button>
+                    <button>Kirim</button>
                 </div>
             </div>
             <div className="ucapan_content" id="ucapan_content">

@@ -1,0 +1,1274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alike&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+.ellya_widad {
+    min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.ellya_widad .greeting {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-image: url('../../assets/ellya-widad-cover.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        margin-top: 0vh;
+        opacity: 1;
+    }
+    100% {
+        margin-top: -100vh;
+        opacity: 0;
+    }
+ }
+ 
+ @keyframes fadeOut {
+    0% {
+        margin-top: 0vh;
+        opacity: 1;
+    }
+    100% {
+        margin-top: -100vh;
+        opacity: 0;
+    }
+ }
+ 
+ .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+ }
+
+.ellya_widad .to_guest {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-bottom: 32px;
+}
+
+.ellya_widad p {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.ellya_widad #yth {
+    font-size: calc(10px + 2vmin);
+    color: #604329;
+    font-weight: 400;
+}
+
+.ellya_widad .open_invitation {
+    background-color: #bf856e;
+    border: none;
+    outline: none;
+    width: calc(17.5% + 3vmin);
+    border-radius: 20px;
+    height: 48px;
+    font-family: 'Alike', serif;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    margin-top: 16px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.ellya_widad .open_invitation:hover {
+    cursor: pointer;
+    background-color: #8d6251;
+}
+
+.ellya_widad #guest_name {
+    font-weight: 700;
+    color: #604329;
+    font-size: calc(10px + 2vmin);
+    font-style: italic;
+}
+
+.ellya_widad .first_page {
+    height: 100vh;
+    width: 100vw;
+    background-size: contain;
+    background-repeat: repeat-x;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #BF856E;
+    position: relative;
+}
+
+.ellya_widad .first_page .bottom_paper_img {
+    width: 100vw;
+}
+
+.ellya_widad .first_page img {
+    width: 50%;
+}
+
+.ellya_widad .first_page picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ellya_widad .first_page #our_name_img {
+    margin-top: 40px;
+    width: 70%;
+}
+
+.ellya_widad .first_page .first_page_title_img {
+    width: 25%;
+}
+
+.ellya_widad .first_page .daun_1 {
+    position: absolute;
+    top: 12.5%;
+    left: 0;
+    width: 17.5%;
+}
+
+.ellya_widad .first_page .daun_2 {
+    position: absolute;
+    top: 7.5%;
+    right: 0;
+    width: 17.5%;
+}
+
+.ellya_widad .first_page .daun_4 {
+    display: none;
+}
+
+.ellya_widad .first_page .daun_3 {
+    position: absolute;
+    bottom: 13%;
+    right: -1%;
+    width: 17.5%;
+}
+
+.ellya_widad .seventh_page .daun_5 {
+    position: absolute;
+    width: 12%;
+    left: 0;
+    top: -15%;
+}
+
+.ellya_widad .seventh_page .daun_6 {
+    position: absolute;
+    width: 12%;
+    right: 0;
+    bottom: 5%;
+    rotate: 180deg;
+}
+
+.ellya_widad .seventh_page .daun_combine {
+    position: absolute;
+    width: 17.5%;
+    left: -5%;
+    bottom: 5%;
+}
+
+.ellya_widad .seventh_page .daun_combine1 {
+    position: absolute;
+    width: 17.5%;
+    right: -3%;
+    top: -10%;
+    rotate: 180deg;
+}
+
+.ellya_widad .eighth_page .daun_combine2 {
+    position: absolute;
+    width: 20%;
+    left: -5%;
+    bottom: 5%;
+}
+
+.ellya_widad .eighth_page .daun_combine3 {
+    position: absolute;
+    width: 20%;
+    right: -5%;
+    top: 14%;
+}
+
+.ellya_widad .first_page .sparkle_1 {
+    position: absolute;
+    top: 0%;
+    left: -2%;
+    width: 20%;
+}
+
+.ellya_widad .seventh_page .sparkle_2 {
+    position: absolute;
+    bottom: 2%;
+    right: -2%;
+    width: 20%;
+}
+
+.ellya_widad .first_page .sparkle_2 {
+    position: absolute;
+    top: -5%;
+    right: -2%;
+    width: 20%;
+}
+
+.ellya_widad .first_page .sparkle_4 {
+    display: none;
+}
+
+.ellya_widad .seventh_page .sparkle {
+    position: absolute;
+    top: -20%;
+    left: -2%;
+    width: 20%;
+}
+
+.ellya_widad .first_page .sparkle_3 {
+    position: absolute;
+    bottom: 0%;
+    right: -3%;
+    width: 20%;
+}
+
+.ellya_widad .first_page p {
+    font-family: 'Playfair Display';
+    color: white;
+    font-style: italic;
+    font-size: calc(20px + 2vmin);
+}
+
+.ellya_widad .second_page {
+    height: 100vh;
+    width: 100vw;
+    background-color: #FAFAF7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ellya_widad .second_page .bismillah {
+    width: 20%;
+}
+
+.ellya_widad .second_page_content {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.ellya_widad .second_page .second_page_surah {
+    box-sizing: border-box;
+    padding: 20px;
+    width: 65%;
+    background-color: #bf856e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.287);
+    border-radius: 15px;
+}
+
+.ellya_widad .second_page .second_page_surah p {
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    color: white;
+}
+
+.ellya_widad .second_page .second_page_surah .surah {
+    margin-top: 20px;
+}
+
+.ellya_widad .second_page .quote_img {
+    width: 65%;
+}
+
+.ellya_widad .second_page .left_leave {
+    width: calc(15% + 40px);
+    margin-left: -40px;
+}
+
+.ellya_widad .second_page .right_leave {
+    width: 15%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.ellya_widad .second_page .daun {
+    width: 100%;
+}
+
+.ellya_widad .second_page .left_leave .daun {
+    width: calc(100% - 40px);
+}
+
+.ellya_widad .second_page .second_page_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 70%;
+    margin-top: -10vh;
+}
+
+.ellya_widad .second_page .second_page_main span {
+    font-size: 40px;
+    color: #BF856E;
+}
+
+.ellya_widad .second_page .second_page_main #upper_quote {
+    display: flex;
+    flex-direction: row-reverse;
+    transform: rotate(180deg);
+}
+
+.ellya_widad .second_page .second_page_main #lower_quote {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.animate_on_scroll {
+    opacity: 0;
+    transform: translateY(200px);
+    /* transform: translateX(300px); */
+    transition: all 1s ease-out;
+    /* transition-delay: 0.2s; */
+}
+
+.animate {
+    opacity: 1;
+    transform: translateY(0px);
+    /* transform: translateX(0); */
+}
+
+.ellya_widad .third_page {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F9D1B6;
+}
+
+.ellya_widad .third_page .profile_section {
+    width: 75vw;
+    margin: 0;
+    height: max-content;
+    background-color: rgba(255, 255, 255, 0.358);
+    margin-top: 45px;
+    border-radius: 24px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: -16px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.ellya_widad .third_page .profile_section .profile_intro {
+    font-style: italic;
+    text-align: center;
+}
+
+.ellya_widad .third_page .top_paper_img {
+    width: 100vw;
+    rotate: 180deg;
+}
+
+.ellya_widad .third_page .profile_section_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.ellya_widad .third_page .profile_section_item .profile_section_box {
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+}
+
+.ellya_widad .third_page .profile_section_item .profile_pic {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 125px;
+}
+
+.ellya_widad .profile_pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+
+}
+
+.ellya_widad .third_page .profile_section_item .profile_desc {
+    max-width: 70%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.ellya_widad .third_page .profile_section_item .ig_btn {
+    background-color: #bf856e;
+    border: none;
+    outline: none;
+    height: 32px;
+    border-radius: 8px;
+    width: 148px;
+    margin-top: 20px;
+    font-family: 'Poppins';
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ellya_widad .third_page .profile_section_item .ig_btn:hover {
+    background-color: #936655;
+    cursor: pointer;
+}
+
+.ellya_widad .third_page .profile_section_item .ig_icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.ellya_widad .third_page .profile_name {
+    font-family: 'Alike', serif;
+    font-style: normal;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.ellya_widad .forth_page {
+    height: 100vh;
+    background-color: #F9D1B6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ellya_widad .forth_page .card_wrapper {
+    width: 75vw;
+    margin: 0;
+    height: 75vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ellya_widad .forth_page .card_item {
+    width: 49%;
+    background-color: rgba(255, 255, 255, 0.358);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.ellya_widad .forth_page .icon_akad {
+    width: 30%;
+    margin-bottom: 15px;
+}
+
+.ellya_widad .card_wrapper p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.ellya_widad .card_wrapper .time {
+    font-style: italic;
+}
+
+.ellya_widad .card_wrapper .location {
+    font-family: 'Alike';
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.ellya_widad .card_wrapper .location_detail {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.ellya_widad .card_wrapper .btn_direction {
+    background-color: #BF856E;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    height: 40px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Alike';
+    font-size: 18px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ellya_widad .card_wrapper .btn_direction:hover {
+    cursor: pointer;
+    background-color: #976a58;
+}
+
+.ellya_widad .forth_page .akad_title {
+    font-size: 30px;
+    font-family: 'Alike';
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.ellya_widad .forth_page .icon_pembatas {
+    width: 90%;
+    margin-top: -110px;
+    margin-bottom: -90px;
+}
+
+.ellya_widad .fifth_page {
+    position: relative;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9D1B6;
+    padding: 0;
+}
+
+.ellya_widad .resepsi_canvas {
+    overflow: hidden;
+    background: none!important;
+    width:75vw;
+    height:85vh;
+    border-radius: 16px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    /* margin-top: -80px; */
+}
+
+.ellya_widad .resepsi_iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.ellya_widad .sixth_page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9D1B6;
+    position: relative;
+}
+
+.ellya_widad .sixth_page .countdown_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 64px;
+    margin-top: 64px;
+}
+
+.ellya_widad .sixth_page .countdown_line {
+    height: 16px;
+    width: 70%;
+    background-color: #bf856e;
+}
+
+.ellya_widad .sixth_page .countdown_frame {
+    position: absolute;
+    z-index: 0;
+    width: 45%;
+}
+
+.ellya_widad .sixth_page .countdown {
+    font-size: 48px;
+    text-align: center;
+    font-family: 'Alike';
+    color: #604329;
+    /* font-style: italic; */
+}
+
+.ellya_widad .btn_date {
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: max-content;
+    border-radius: 8px;
+    background-color: #BF856E;
+    color: white;
+    font-family: 'Alike';
+    font-size: 18px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ellya_widad .btn_date:hover {
+    background-color: #976a58;
+    cursor: pointer;
+}
+
+.ellya_widad .sixth_page .bottom_paper_img {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+}
+
+.ellya_widad .seventh_page {
+    height: 100vh;
+    background-color: #FAFAF7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.ellya_widad .seventh_page .notes {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Alike';
+    color: #bf856e;
+    /* font-style: italic; */
+    margin-bottom: 20px;
+}
+
+.ellya_widad .note_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60vw;
+    height: 60vh;
+    background-color: #e3ccc1c5;
+    border-radius: 24px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.ellya_widad .prokes {
+    width: 180px;
+    height: 180px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 120px;
+}
+
+.ellya_widad .seventh_page .daun_kiri {
+    position: absolute;
+    width: 15vw;
+    left: -32px;
+    top: 0px;
+}
+
+.ellya_widad .seventh_page .daun_kanan {
+    position: absolute;
+    width: 15vw;
+    right: -8px;
+    bottom: 80px;
+}
+
+.ellya_widad .eighth_page {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #F9D1B6;
+}
+
+.ellya_widad .eighth_page .pembatas_pakaian {
+    position: absolute;
+    top: -0.1%;
+    width: 100vw;
+    rotate: 180deg;
+}
+
+.ellya_widad .eighth_page .pakaian {
+    font-size: 48px;
+    text-align: center;
+    font-family: 'Alike';
+    color: #604329;
+    margin-bottom: 20px;
+}
+
+.ellya_widad .eighth_page .dresscode_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    height: 60vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 24px;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.ellya_widad .dresscode_wrapper .dresscode_img {
+    width: 255px;
+    align-self: flex-end;
+    margin-left: 20px;
+    margin-right: -10px;
+}
+
+.ellya_widad .palette_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 480px;
+}
+
+.ellya_widad .palette_wrapper .dress_p {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.ellya_widad .palette_wrapper p {
+    text-align: center;
+    font-size: 19px;
+    color: #604329;
+}
+
+.ellya_widad .palette_wrapper img {
+    width: 65%;
+}
+
+.ellya_widad #myRef {
+    position: absolute;
+    z-index: 1;
+    top: -50px;
+}
+
+.atcb {
+    background-color: salmon;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+ }
+ 
+ @keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+ }
+
+/* TAB SIZE */
+@media only screen and (max-width: 720px) {
+    .ellya_widad .greeting {
+        background-size: 100vh;
+        background-color: #FDFBFC;
+    }
+
+    .ellya_widad #yth {
+        font-size: calc(14px + 2vmin);
+        font-weight: 400;
+    }
+
+    .ellya_widad #guest_name {
+        font-weight: 700;
+        color: #604329;
+        font-size: calc(14px + 2vmin);
+        font-style: italic;
+    }
+
+    .ellya_widad .open_invitation {
+        width: 40%;
+        height: 60px;
+        margin-top: 25px;
+        font-size: 26px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .ellya_widad .first_page .first_page_title_img {
+        margin-top: 20px;
+        width: 55%;
+    }
+
+    .ellya_widad .first_page #marry_date {
+        width: 75%;
+        font-size: calc(36px + 3vmin);
+        text-align: center;
+    }
+
+    .ellya_widad .first_page img {
+        width: 60%;
+    }
+
+    .ellya_widad .first_page .bottom_paper_img {
+        height: 80px;
+    }
+}
+
+/* MOBILE SIZE */
+@media only screen and (max-width: 420px) {
+    .ellya_widad .greeting {
+        background-size: 100vh;
+        background-color: #FDFBFC;
+    }
+
+    .ellya_widad .first_page {
+        height: 94vh;
+    }
+
+    .ellya_widad .open_invitation {
+        padding: 10px;
+        width: 48%;
+        font-size: 20px;
+        height: 54px;
+        margin-bottom: 10vh;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .ellya_widad .first_page img {
+        width: 80%;
+    }
+
+    .ellya_widad .first_page .bottom_paper_img {
+        height: 75px;
+    }
+
+    .ellya_widad .second_page .second_page_surah {
+        width: 75vw;
+    }
+
+    .ellya_widad .second_page .second_page_surah p {
+        font-size: 16px;
+    }
+
+    .ellya_widad .second_page .quote_img {
+        width: 75vw;
+    }
+
+    .ellya_widad .second_page .bismillah {
+        width: 80vw;
+    }
+
+    .ellya_widad .second_page_content {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: -35px;
+    }
+
+    .ellya_widad .second_page .left_leave {
+        width: 35vw;
+        margin: 0;
+        box-sizing: border-box;
+        align-self: flex-start;
+        margin: 0;
+        margin-left: -60px;
+        margin-bottom: -20px;
+    }
+
+    .ellya_widad .second_page .right_leave {
+        width: 35vw;
+        margin: 0;
+        box-sizing: border-box;
+        align-self: flex-end;
+        margin-right: -55px;
+        margin-top: -125px;
+    }
+
+    .ellya_widad .third_page {
+        height: max-content;
+        padding-bottom: 10px;
+    }
+
+    .ellya_widad .third_page .profile_section .profile_intro {
+        font-size: 14px;
+    }
+
+    .ellya_widad .third_page .profile_section_item {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .ellya_widad .third_page .profile_section_item .profile_pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .ellya_widad .third_page .profile_section {
+        margin-top: 10px;
+        width: 85vw;
+    }
+
+    .ellya_widad .third_page .profile_name {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .ellya_widad .third_page .profile_section_item .profile_desc {
+        max-width: 90%;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .ellya_widad .third_page .profile_section_item .ig_btn {
+        margin-top: 10px;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .ellya_widad .third_page .profile_section_item .ig_icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .ellya_widad .forth_page {
+        height: max-content;
+        padding-top: 10px;
+    }
+
+    .ellya_widad .forth_page .card_wrapper {
+        width: 85vw;
+        height: max-content;
+        margin-left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ellya_widad .forth_page .card_item {
+        width: 85vw;
+        margin-bottom: 20px;
+    }
+
+    .ellya_widad .forth_page .icon_akad {
+        width: 35%;
+        margin-bottom: 5px;
+    }
+
+    .ellya_widad .card_wrapper p {
+        font-size: 16px;
+    }
+
+    .ellya_widad .forth_page .akad_title {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .ellya_widad .forth_page .icon_pembatas {
+        margin-top: -70px;
+        margin-bottom: -50px;
+    }
+
+    .ellya_widad .card_wrapper .location {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .ellya_widad .card_wrapper .location_detail {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .ellya_widad .card_wrapper .btn_direction {
+        font-size: 16px;
+        height: 36px;
+    }
+
+    .ellya_widad .fifth_page {
+        height: max-content;
+        padding-bottom: 30px;
+        justify-content: flex-start;
+    }
+
+    .ellya_widad #myRef {
+        position: absolute;
+        z-index: 1;
+        top: -10vh;
+    }
+
+    .ellya_widad .resepsi_canvas {
+        height: 75vh;
+        width: 85%;
+        margin: 0;
+    }
+
+    .ellya_widad .third_page .profile_section {
+        margin-left: 0;
+    }
+
+    .ellya_widad .sixth_page .countdown {
+        font-size: 26px;
+    }
+
+    .ellya_widad .sixth_page .countdown_line {
+        height: 8px;
+        width: 20%;
+        background-color: #bf856e;
+    }
+    
+    .ellya_widad .sixth_page .countdown_frame {
+        position: absolute;
+        z-index: 0;
+        width: 75%;
+    }
+
+    .ellya_widad .sixth_page .bottom_paper_img {
+        height: 75px;
+    }
+
+    .ellya_widad .seventh_page .notes {
+        font-size: 24px;
+        z-index: 1;
+    }
+
+    .ellya_widad .note_wrapper {
+        width: 80vw;
+        height: 75vh;
+        z-index: 1;
+    }
+
+    .ellya_widad .prokes {
+        width: 120px;
+        height: 120px;
+    }
+
+    .ellya_widad .seventh_page .daun_kiri, .ellya_widad .seventh_page .daun_kanan {
+        display: none;
+    }
+
+    .ellya_widad .first_page .daun_1 {
+        position: absolute;
+        top: 72.5%;
+        width: 25%;
+    }
+    
+    .ellya_widad .first_page .daun_2 {
+        position: absolute;
+        top: 2.5%;
+        right: 0;
+        width: 27.5%;
+    }
+
+    .ellya_widad .first_page .daun_4 {
+        rotate: 180deg;
+        transform: scale(1, -1);
+        display: block;
+        position: absolute;
+        top: 3%;
+        left: 0;
+        width: 27.5%;
+    }
+    
+    .ellya_widad .first_page .daun_3 {
+        position: absolute;
+        bottom: 15%;
+        right: -1%;
+        width: 27.5%;
+    }
+    
+    .ellya_widad .first_page .sparkle_1 {
+        position: absolute;
+        top: 69%;
+        left: -5%;
+        width: 35%;
+    }
+    
+    .ellya_widad .first_page .sparkle_2 {
+        position: absolute;
+        top: 0%;
+        right: -2%;
+        width: 27.5%;
+    }
+
+    .ellya_widad .first_page .sparkle_4 {
+        position: absolute;
+        display: block;
+        top: 0%;
+        left: 0%;
+        width: 27.5%;
+    }
+    
+    .ellya_widad .first_page .sparkle_3 {
+        position: absolute;
+        bottom: 12%;
+        right: -3%;
+        width: 27.5%;
+    }
+
+    .ellya_widad .first_page #our_name_img {
+        width: 80%;
+        margin-top: 0px;
+    }
+    
+    .ellya_widad .first_page .first_page_title_img {
+        margin-top: 75px;
+        width: 55%;
+    }
+    
+    .ellya_widad .first_page #marry_date {
+        width: 75%;
+        font-size: calc(18px + 2vmin);
+        text-align: center;
+    }
+
+    .ellya_widad .seventh_page .sparkle_2 {
+        position: absolute;
+        bottom: 10%;
+        right: -2%;
+        width: 35%;
+    }
+
+    .ellya_widad .seventh_page .sparkle {
+        position: absolute;
+        top: 5%;
+        left: -5%;
+        width: 40%;
+    }
+    
+    .ellya_widad .seventh_page .daun_5 {
+        position: absolute;
+        width: 35%;
+        left: -2%;
+        top: 10%;
+    }
+    
+    .ellya_widad .seventh_page .daun_6 {
+        position: absolute;
+        width: 30%;
+        right: -1%;
+        bottom: 10%;
+        rotate: 180deg;
+    }
+    
+    .ellya_widad .seventh_page .daun_combine {
+        position: absolute;
+        width: 45%;
+        left: -9%;
+        bottom: 10%;
+    }
+
+    .ellya_widad .seventh_page .daun_combine1 {
+        position: absolute;
+        width: 45%;
+        right: -8%;
+        top: 10%;
+        rotate: 180deg;
+    }
+
+    .ellya_widad .eighth_page .pakaian {
+        font-size: 26px;
+        margin-top: -20%;
+    }
+
+    .ellya_widad .eighth_page .dresscode_wrapper {
+        width: 80vw;
+        height: 65vh;
+        z-index: 1;
+        padding-top: 40px;
+    }
+
+    .ellya_widad .dresscode_wrapper .dresscode_img {
+        margin-left: 0;
+        margin-right: 0;
+        width: 200px;
+        position: absolute;
+    }
+
+    .ellya_widad .palette_wrapper .dress_p {
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    .ellya_widad .palette_wrapper p {
+        text-align: center;
+        font-size: 16px;
+        width: 100%;
+    }
+    
+    .ellya_widad .palette_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-start;
+        width: 100%;
+    }
+    
+    .ellya_widad .palette_wrapper img {
+        width: 100%;
+    }
+
+    .ellya_widad .eighth_page .daun_combine2 {
+        position: absolute;
+        width: 47.5%;
+        left: -17.5%;
+        bottom: 25%;
+    }
+    
+    .ellya_widad .eighth_page .daun_combine3 {
+        position: absolute;
+        width: 45%;
+        right: -5%;
+        top: 17.5%;
+    }
+}

@@ -27,24 +27,21 @@ const Timer = () => {
 
   return (
     <div className="timer">
-      <label className='countdown_title'>Countdown</label>
-      <div className="countdown_wrapper">
-        <div className="countdown_child">
-          <label className='title_label'>Days</label>
-          <label className='content_label'>{days}</label>
-        </div>
-        <div className="countdown_child">
-          <label className='title_label'>Hours</label>
-          <label className='content_label'>{hours}</label>
-        </div>
-        <div className="countdown_child">
-          <label className='title_label'>Minutes</label>
-          <label className='content_label'>{minutes}</label>
-        </div>
-        <div className="countdown_child">
-          <label className='title_label'>Seconds</label>
-          <label className='content_label'>{seconds}</label>
-        </div>
+      <div className="countdown_child">
+        <label className='title_label'>Hari</label>
+        <label className='content_label'>{days}</label>
+      </div>
+      <div className="countdown_child">
+        <label className='title_label'>Jam</label>
+        <label className='content_label'>{hours}</label>
+      </div>
+      <div className="countdown_child">
+        <label className='title_label'>Menit</label>
+        <label className='content_label'>{minutes}</label>
+      </div>
+      <div className="countdown_child">
+        <label className='title_label'>Detik</label>
+        <label className='content_label'>{seconds}</label>
       </div>
     </div>
   );

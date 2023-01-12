@@ -1,15 +1,12 @@
 .timer {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.countdown_wrapper {
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 50vw;
+    height: max-content;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    z-index: 1;
 }
 
 .countdown_child {
@@ -17,12 +14,6 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-}
-
-.timer .countdown_title {
-    font-family: 'Rouge Script';
-    font-size: calc(64px + 3vmin);
-    margin-bottom: 10px;
 }
 
 .countdown_child label {
