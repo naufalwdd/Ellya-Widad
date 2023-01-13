@@ -57,7 +57,7 @@ function EllyaWidad(props) {
     }
 
     useEffect(() => {
-        document.title = 'The Wedding of Ellya & Widad';
+        document.title = 'Pernikahan Ellya & Widad';
         const urlParams = new URLSearchParams(queryString);
         const name = urlParams.get('to')
         name == null ? setGuestName('Bapak/Ibu/Saudara/Saudari') : setGuestName(name)
