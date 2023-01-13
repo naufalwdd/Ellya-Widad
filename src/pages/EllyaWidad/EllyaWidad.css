@@ -174,7 +174,7 @@
     width: 12%;
     right: 0;
     bottom: 5%;
-    rotate: 180deg;
+    transform: rotate(180deg) !important;
 }
 
 .ellya_widad .seventh_page .daun_combine {
@@ -189,7 +189,7 @@
     width: 17.5%;
     right: -3%;
     top: -10%;
-    rotate: 180deg;
+    transform: rotate(180deg) !important;
 }
 
 .ellya_widad .eighth_page .daun_combine2 {
@@ -337,7 +337,7 @@
 .ellya_widad .second_page .second_page_main #upper_quote {
     display: flex;
     flex-direction: row-reverse;
-    transform: rotate(180deg);
+    transform: rotate(180deg) !important;
 }
 
 .ellya_widad .second_page .second_page_main #lower_quote {
@@ -392,7 +392,7 @@
 
 .ellya_widad .third_page .top_paper_img {
     width: 100vw;
-    rotate: 180deg;
+    transform: rotate(180deg) !important;
 }
 
 .ellya_widad .third_page .profile_section_item {
@@ -720,7 +720,7 @@
     position: absolute;
     top: -0.1%;
     width: 100vw;
-    rotate: 180deg;
+    transform: rotate(180deg) !important;
 }
 
 .ellya_widad .eighth_page .pakaian {
@@ -861,6 +861,14 @@
 
 /* MOBILE SIZE */
 @media only screen and (max-width: 420px) {
+    .ellya_widad #yth {
+        font-size: 16px;
+    }
+
+    .ellya_widad #guest_name {
+        font-size: 16px;
+    }
+
     .ellya_widad .greeting {
         background-size: 100vh;
         background-color: #FDFBFC;
@@ -872,11 +880,12 @@
 
     .ellya_widad .open_invitation {
         padding: 10px;
-        width: 48%;
-        font-size: 20px;
-        height: 54px;
+        width: 36%;
+        font-size: 16px;
+        height: 40px;
         margin-bottom: 10vh;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 12px;
     }
 
     .ellya_widad .first_page img {
@@ -1106,7 +1115,7 @@
     }
 
     .ellya_widad .first_page .daun_4 {
-        rotate: 180deg;
+        transform: rotate(180deg) !important;
         transform: scale(1, -1);
         display: block;
         position: absolute;
@@ -1193,7 +1202,7 @@
         width: 30%;
         right: -1%;
         bottom: 10%;
-        rotate: 180deg;
+        transform: rotate(180deg) !important;
     }
     
     .ellya_widad .seventh_page .daun_combine {
@@ -1208,7 +1217,7 @@
         width: 45%;
         right: -8%;
         top: 10%;
-        rotate: 180deg;
+        transform: rotate(180deg) !important;
     }
 
     .ellya_widad .eighth_page .pakaian {

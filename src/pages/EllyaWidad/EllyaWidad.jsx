@@ -37,8 +37,12 @@ import DaunCombine2 from '../../assets/daun-combine2.png'
 import DaunCombine3 from '../../assets/daun-combine3.png'
 import DressCode from '../../assets/dresscode.png'
 import ColorPalette from '../../assets/color-palette.png'
+import { useLocation } from 'react-router-dom';
 
 function EllyaWidad(props) {
+
+    const location = useLocation()
+    const queryString = new URLSearchParams(location.search)
 
     var [guestName, setGuestName] = useState('')
     var [isPlaying, setIsPlaying] = useState(false)
@@ -53,7 +57,6 @@ function EllyaWidad(props) {
     }
 
     useEffect(() => {
-        const queryString = window.location.search
         const urlParams = new URLSearchParams(queryString);
         const name = urlParams.get('to')
         name == null ? setGuestName('Bapak/Ibu/Saudara/Saudari') : setGuestName(name)
