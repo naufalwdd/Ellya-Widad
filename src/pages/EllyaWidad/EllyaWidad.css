@@ -70,7 +70,7 @@
 }
 
 .ellya_widad #yth {
-    font-size: calc(10px + 2vmin);
+    font-size: 18px;
     color: #604329;
     font-weight: 400;
 }
@@ -79,11 +79,11 @@
     background-color: #bf856e;
     border: none;
     outline: none;
-    width: calc(17.5% + 3vmin);
-    border-radius: 20px;
-    height: 48px;
+    width: 180px;
+    border-radius: 12px;
+    height: 40px;
     font-family: 'Alike', serif;
-    font-size: calc(10px + 2vmin);
+    font-size: 18px;
     color: white;
     margin-top: 16px;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
@@ -97,7 +97,7 @@
 .ellya_widad #guest_name {
     font-weight: 700;
     color: #604329;
-    font-size: calc(10px + 2vmin);
+    font-size: 18px;
     font-style: italic;
 }
 
@@ -1127,7 +1127,7 @@
     .ellya_widad .first_page .daun_3 {
         position: absolute;
         bottom: 15%;
-        right: -1%;
+        right: -5%;
         width: 27.5%;
     }
     
@@ -1156,7 +1156,7 @@
     .ellya_widad .first_page .sparkle_3 {
         position: absolute;
         bottom: 12%;
-        right: -3%;
+        right: -5%;
         width: 27.5%;
     }
 
