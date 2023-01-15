@@ -1,15 +1,18 @@
 import EllyaWidad from './pages/EllyaWidad/EllyaWidad';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import MainPage from './pages/MainPage/MainPage';
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
+    console.log(window.location.pathname);
     return (
-        <BrowserRouter basename={window.location.pathname || ''}>
+        <HashRouter>
             <Routes>
-                <Route path="/" element={<EllyaWidad />} />
+                <Route path="/" element={<MainPage />} />
+                <Route path="/Ellya-Widad" element={<EllyaWidad />} />
             </Routes>
             <link rel="preconnect" href="https://fonts.googleapis.com"></link>
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
