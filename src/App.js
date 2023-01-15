@@ -5,13 +5,13 @@ import FulanFulanah from './pages/FulanFulanah/FulanFulanah';
 
 function App() {
     return (
-        <HashRouter>
+        <BrowserRouter basename={window.location.pathname || ''}>
             <Routes>
                 <Route path="/" element={<EllyaWidad />} />
             </Routes>
             <link rel="preconnect" href="https://fonts.googleapis.com"></link>
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
-        </HashRouter>
+        </BrowserRouter>
     );
 }
 
