@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.33b0cd0c.css",
-    "main.js": "/static/js/main.e63a025a.js",
+    "main.js": "/static/js/main.1b189ed7.js",
     "static/js/787.342f8852.chunk.js": "/static/js/787.342f8852.chunk.js",
     "static/media/di-sepertiga-malam.mp3": "/static/media/di-sepertiga-malam.83a1c48fe990bf4f08aa.mp3",
     "static/media/ellya-widad-cover.svg": "/static/media/ellya-widad-cover.dd84ce1885afe3b800d0.svg",
@@ -39,11 +39,11 @@
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.33b0cd0c.css.map": "/static/css/main.33b0cd0c.css.map",
-    "main.e63a025a.js.map": "/static/js/main.e63a025a.js.map",
+    "main.1b189ed7.js.map": "/static/js/main.1b189ed7.js.map",
     "787.342f8852.chunk.js.map": "/static/js/787.342f8852.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.33b0cd0c.css",
-    "static/js/main.e63a025a.js"
+    "static/js/main.1b189ed7.js"
   ]
 }
