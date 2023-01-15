@@ -38,6 +38,7 @@ import DaunCombine3 from '../../assets/daun-combine3.png'
 import DressCode from '../../assets/dresscode.png'
 import ColorPalette from '../../assets/color-palette.png'
 import { useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 function EllyaWidad(props) {
 
@@ -48,6 +49,39 @@ function EllyaWidad(props) {
     var [isPlaying, setIsPlaying] = useState(false)
     var [akadShown, setAkadShown] = useState(false)
     var [resepsiShown, setResepsiShown] = useState(false)
+
+    var [name, setName] = useState('')
+    var [presence, setPresence] = useState('ya')
+    var [totalGuest, setTotalGuest] = useState('1')
+    var [message, setMessage] = useState('')
+
+    const PresenceChange = event => {
+        setPresence(event.target.value);
+    };
+
+    const TotalGuestChange = event => {
+        setTotalGuest(event.target.value)
+    }
+
+    const HandleSubmit = (e) => {
+        e.preventDefault()
+        console.log(name, presence, totalGuest, message);
+
+        var data = {
+            Name: name,
+            Presence: presence,
+            TotalGuest: totalGuest,
+            Message: message
+        }
+
+        axios.post('https://sheet.best/api/sheets/af2e30e1-6531-433a-be10-727a734423eb', data).then((response) => {
+            console.log(response);
+            setName('')
+            setPresence('ya')
+            setTotalGuest('1')
+            setMessage('')
+        })
+    }
 
     const FadeOut = () => {
         document.getElementById("greeting").style.animation = 'fadeOut 1.25s linear'
@@ -62,6 +96,10 @@ function EllyaWidad(props) {
         const name = urlParams.get('to')
         name == null ? setGuestName('Bapak/Ibu/Saudara/Saudari') : setGuestName(name)
         atcb_init()
+
+        // axios.get('https://sheet.best/api/sheets/af2e30e1-6531-433a-be10-727a734423eb').then((response) => {
+        //     console.log(response);
+        // })
     });
 
     const PlayMusicAndAnimate = () => {
@@ -316,6 +354,38 @@ function EllyaWidad(props) {
                     </div>
                     <img src={ColorPalette} alt="" className='palette_img animate_on_scroll'/>
                 </div>
+            </div>
+        </div>
+        <div className="ninth_page">
+            <div className="guest_card">
+                <div className="input_section">
+                    <label className="form_title">Nama</label>
+                    <input className="name_input" id="name_input" placeholder="Nama Kamu..." onChange={(e) => setName(e.target.value)} value={name}></input>
+                </div>
+                <div className="input_section_double">
+                    <div className="input_section" id="input_sec">
+                        <label className="form_title">Kehadiran</label>
+                        <select className="presence_input" id="presence_input" onChange={PresenceChange} value={presence}>
+                            <option value="ya">Hadir</option>
+                            <option value="tidak">Tidak Hadir</option>
+                        </select>
+                    </div>
+                    <div className="input_section" id="input_sec">
+                        <label className="form_title">Jumlah</label>
+                        <select className="jumlah_input" id="jumlah_input" onChange={TotalGuestChange} value={totalGuest}>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="More">Lebih dari 2</option>
+                        </select>
+                    </div>
+                </div>
+                <div className="input_section">
+                    <label className="form_title">Ucapan / Do'a</label>
+                    <textarea className="name_input" id="pray" placeholder="Tulis Ucapan" onChange={(e) => setMessage(e.target.value)} value={message}></textarea>
+                </div>
+            </div>
+            <div className="btn_wrapper">
+                <button onClick={HandleSubmit}>Kirim</button>
             </div>
         </div>
     </div>

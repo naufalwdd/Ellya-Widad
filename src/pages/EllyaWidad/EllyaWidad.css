@@ -791,6 +791,103 @@
     background-color: salmon;
 }
 
+.ellya_widad .ninth_page {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #F9D1B6;
+}
+
+.ellya_widad .ninth_page .guest_card {
+    width: calc(30vw);
+    border-radius: 15px 15px 0 0;
+    height: max-content;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.25);
+}
+
+.ellya_widad .ninth_page .input_section {
+    display: flex;
+    flex-direction: column; 
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+.ellya_widad .input_section_double {
+    display: flex;
+}
+
+.ellya_widad .input_section input, .ellya_widad .input_section textarea {
+    background-color: #FFFFFF;
+    border: 1px solid #E4E6E9;
+    border-radius: 10px;
+    height: 30px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Poppins';
+    font-size: 14px;
+    outline: none;
+    /* padding-top: 10px; */
+}
+
+.ellya_widad .input_section_double select {
+    background: #FFFFFF;
+    border: 1px solid #E4E6E9;
+    border-radius: 10px;
+    height: 33px;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    outline: none;
+}
+
+.ellya_widad .input_section_double select:hover {
+    cursor: pointer;
+}
+
+.ellya_widad .input_section #pray {
+    height: 200px;
+}
+
+.ellya_widad .guest_card label {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-style: italic;
+    font-size: 15px;
+}
+
+.ellya_widad .btn_wrapper {
+    width: calc(30vw + 40px);
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.ellya_widad .btn_wrapper button {
+    background-color: #936655;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 0 0 15px 15px;
+    color: white;
+    font-weight: 700;
+    font-family: 'Lato';
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ellya_widad .btn_wrapper button:hover {
+    cursor: pointer;
+    background-color: #604329;
+}
+
 @-webkit-keyframes fadeIn {
     0% {
         opacity: 0;

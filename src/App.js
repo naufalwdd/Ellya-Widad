@@ -1,5 +1,4 @@
 import MainPage from './pages/MainPage/MainPage'
-import WidadEllya from './pages/WidadEllya/WidadEllya';
 import EllyaWidad from './pages/EllyaWidad/EllyaWidad';
 import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 import FulanFulanah from './pages/FulanFulanah/FulanFulanah';
@@ -9,7 +8,6 @@ function App() {
         <HashRouter>
             <Routes>
                 <Route path="/" element={<MainPage />} />
-                <Route path="/Widad-Ellya" element={<WidadEllya />} />
                 <Route path="/Ellya-Widad" element={<EllyaWidad />} />
                 <Route path="/Fulan-Fulanah" element={<FulanFulanah />} />
             </Routes>
