@@ -7,9 +7,7 @@ function App() {
     return (
         <HashRouter>
             <Routes>
-                <Route path="/" element={<MainPage />} />
-                <Route path="/Ellya-Widad" element={<EllyaWidad />} />
-                <Route path="/Fulan-Fulanah" element={<FulanFulanah />} />
+                <Route path="/" element={<EllyaWidad />} />
             </Routes>
             <link rel="preconnect" href="https://fonts.googleapis.com"></link>
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
