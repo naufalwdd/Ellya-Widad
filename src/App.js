@@ -1,7 +1,5 @@
-import MainPage from './pages/MainPage/MainPage'
 import EllyaWidad from './pages/EllyaWidad/EllyaWidad';
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
-import FulanFulanah from './pages/FulanFulanah/FulanFulanah';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
     return (
