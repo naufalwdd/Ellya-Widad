@@ -39,12 +39,13 @@ import DressCode from '../../assets/dresscode.png'
 import ColorPalette from '../../assets/color-palette.png'
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
+import ProfileIcon from '../../assets/profile.png'
 
 function EllyaWidad(props) {
 
     const location = useLocation()
     const queryString = new URLSearchParams(location.search)
-
+    var [effectRan, setEffectRan] = useState(false)
     var [guestName, setGuestName] = useState('')
     var [isPlaying, setIsPlaying] = useState(false)
     var [akadShown, setAkadShown] = useState(false)
@@ -54,9 +55,13 @@ function EllyaWidad(props) {
     var [presence, setPresence] = useState('ya')
     var [totalGuest, setTotalGuest] = useState('1')
     var [message, setMessage] = useState('')
+    var [ucapan, setUcapan] = useState([])
+
+    var globalVal = []
 
     const PresenceChange = event => {
         setPresence(event.target.value);
+        document.getElementById('jumlah_input').disabled = event.target.value == 'ya' ? false : true
     };
 
     const TotalGuestChange = event => {
@@ -65,42 +70,65 @@ function EllyaWidad(props) {
 
     const HandleSubmit = (e) => {
         e.preventDefault()
-        console.log(name, presence, totalGuest, message);
 
-        var data = {
-            Name: name,
-            Presence: presence,
-            TotalGuest: totalGuest,
-            Message: message
-        }
+        var postData = new FormData();
+        postData.append("Name", name);
+        postData.append("Presence", presence);
+        postData.append("TotalGuest", totalGuest);
+        postData.append("Message", message);
 
-        axios.post('https://sheet.best/api/sheets/af2e30e1-6531-433a-be10-727a734423eb', data).then((response) => {
+        var sentUcapan = {}
+        sentUcapan['Name'] = name
+        sentUcapan['Presence'] = presence
+        sentUcapan['TotalGuest'] = totalGuest
+        sentUcapan['Message'] = message
+
+        axios.post('https://script.google.com/macros/s/AKfycbxDnzXP9ia78vt4M4EwM0tQyUdjMkMAXU4nfkOxuiAPyPwKNDcsOmqd2FBKpV_gtWrsYQ/exec', postData).then((response) => {
             console.log(response);
             setName('')
             setPresence('ya')
             setTotalGuest('1')
             setMessage('')
+            GetRSVPData()
         })
     }
 
     const FadeOut = () => {
-        document.getElementById("greeting").style.animation = 'fadeOut 1.25s linear'
+        document.getElementById("greeting").style.animation = 'fadeOut 1s linear'
         document.getElementById("greeting").style.animationFillMode = 'forwards'
+        document.getElementById("to_guest").style.animation = 'fadeOut 0.25s linear'
+        document.getElementById("to_guest").style.animationFillMode = 'forwards'
         document.getElementById('ellya_widad').style.overflow = 'auto'
         document.getElementById('ellya_widad').style.overflowX = 'hidden'
     }
 
     useEffect(() => {
-        document.title = 'Pernikahan Ellya & Widad';
-        const urlParams = new URLSearchParams(queryString);
-        const name = urlParams.get('to')
-        name == null ? setGuestName('Bapak/Ibu/Saudara/Saudari') : setGuestName(name)
-        atcb_init()
+        if (!effectRan) {
+            document.title = 'Pernikahan Ellya & Widad';
+            const urlParams = new URLSearchParams(queryString);
+            const name = urlParams.get('to')
+            name == null ? setGuestName('Bapak/Ibu/Saudara/Saudari') : setGuestName(name)
+            atcb_init()
+            GetRSVPData()
+        }
 
-        // axios.get('https://sheet.best/api/sheets/af2e30e1-6531-433a-be10-727a734423eb').then((response) => {
-        //     console.log(response);
-        // })
-    });
+        setEffectRan(true)
+    }, []);
+
+    const GetRSVPData = () => {
+        axios.get('https://script.google.com/macros/s/AKfycbxDnzXP9ia78vt4M4EwM0tQyUdjMkMAXU4nfkOxuiAPyPwKNDcsOmqd2FBKpV_gtWrsYQ/exec').then((res) => {
+            console.log(res.data);
+            if (res.data == null) {
+                return
+            }
+
+            if (res.data.length == 0) {
+                return
+            }
+
+            setUcapan(res.data.reverse())
+        })
+    }
 
     const PlayMusicAndAnimate = () => {
         setIsPlaying(true)
@@ -109,9 +137,9 @@ function EllyaWidad(props) {
     }
 
     const FadeIn = () => {
-        document.getElementById('first_page_title_img').style.animation = 'fadeIn 3.5s'
-        document.getElementById('our_name_img').style.animation = 'fadeIn 3.5s'
-        document.getElementById('marry_date').style.animation = 'fadeIn 3.5s'
+        document.getElementById('first_page_title_img').style.animation = 'fadeIn 3.25s'
+        document.getElementById('our_name_img').style.animation = 'fadeIn 3.25s'
+        document.getElementById('marry_date').style.animation = 'fadeIn 3.25s'
     }
 
     const ScrollToMap = () => {
@@ -159,7 +187,7 @@ function EllyaWidad(props) {
             playStatus={isPlaying == true ? Sound.status.PLAYING : Sound.status.STOPPED}
         ></Sound>
         <div className="greeting" id='greeting'>
-            <div className="to_guest">
+            <div className="to_guest" id='to_guest'>
                 <p id="yth">Kepada Yth.</p>
                 <p id="guest_name">{guestName}</p>
                 <button className='open_invitation' id='open_invitation' onClick={PlayMusicAndAnimate}>Buka Undangan</button>
@@ -290,21 +318,6 @@ function EllyaWidad(props) {
                 <div className="countdown_line"></div>
                 <img src={CountdownFrame} alt="" className='countdown_frame'/>
             </div>
-            {/* <div className="atcb animate_on_scroll">
-            { '{' }
-                "name":"Resepsi Pernikahan Ellya & Widad",
-                "startDate":"2023-04-24",
-                "endDate":"2023-04-24",
-                "startTime":"10:00",
-                "endTime":"13:00",
-                "location":"Kopo Square",
-                "label":"Simpan Tanggal",
-                "options":[
-                    "Google"
-                ],
-                "iCalFileName":"Reminder-Event"
-            { '}' }
-            </div> */}
             <form onSubmit={e => {
             e.preventDefault();
             atcb_action({
@@ -357,7 +370,7 @@ function EllyaWidad(props) {
             </div>
         </div>
         <div className="ninth_page">
-            <div className="guest_card">
+            <div className="guest_card animate_on_scroll">
                 <div className="input_section">
                     <label className="form_title">Nama</label>
                     <input className="name_input" id="name_input" placeholder="Nama Kamu..." onChange={(e) => setName(e.target.value)} value={name}></input>
@@ -383,9 +396,26 @@ function EllyaWidad(props) {
                     <label className="form_title">Ucapan / Do'a</label>
                     <textarea className="name_input" id="pray" placeholder="Tulis Ucapan" onChange={(e) => setMessage(e.target.value)} value={message}></textarea>
                 </div>
-            </div>
-            <div className="btn_wrapper">
                 <button onClick={HandleSubmit}>Kirim</button>
+                {ucapan.length > 0 ? (<div className="ucapan_content" id="ucapan_content">
+                    <div className="message_card">
+                        {ucapan.map((x) => (
+                        <div className="message_list">
+                            <img src={ProfileIcon}/>
+                            <div className="msg">
+                                <div className="msg_header">
+                                    <label className="guest_name">{x.Name}</label>
+                                    {x.Presence == 'ya' ? (<label className="presence">Hadir</label>) : (<label className="absence">Tidak Hadir</label>)}
+                                </div>
+                                <p className="message_val">{x.Message}</p>
+                            </div>
+                        </div>
+                        ))}
+                    </div>
+                </div>) : ''}
+            </div>
+            <div className="footer">
+                <p className='footer_text'>Powered by Resepsi Kami</p>
             </div>
         </div>
     </div>

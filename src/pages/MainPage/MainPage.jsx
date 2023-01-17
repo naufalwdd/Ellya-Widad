@@ -4,21 +4,13 @@ import './MainPage.css';
 
 function MainPage(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main_page">
+        <div className="main_page_content">
+            <p className="web_title" id="title_1">Digital Invitation Provider</p>
+            <p className="web_title" id="title_2">For Your Wedding Event</p>
+            <p className="web_desc">Sebarkan informasi resepsi pernikahanmu kepada kerabat secara cepat dan mudah dengan fitur yang kami sediakan</p>
+            <button className="btn_order" onClick={() => window.location.href='https://www.instagram.com/naufalwdd/'}>Pesan Sekarang</button>
+        </div>
     </div>
   );
 }

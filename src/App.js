@@ -3,7 +3,6 @@ import MainPage from './pages/MainPage/MainPage';
 import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
-    console.log(window.location.pathname);
     return (
         <HashRouter>
             <Routes>
