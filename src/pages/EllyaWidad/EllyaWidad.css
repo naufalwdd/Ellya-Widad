@@ -1070,6 +1070,101 @@
     bottom: 5%
 }
 
+.ellya_widad .navigation {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    bottom: 2%;
+    left: 41.5vw;
+    width: 17vw;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #FAFAF7;
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+    display: none;
+}
+
+.ellya_widad .nav_btn {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.ellya_widad .nav_btn:hover {
+    cursor: pointer;
+}
+
+.ellya_widad .nav_btn:hover .garis {
+    background-color: #BF856E;
+    height: 4px;
+    width: 100%;
+}
+
+.ellya_widad .nav_btn:hover #garis_home {
+    border-bottom-left-radius: 12px;
+}
+
+.ellya_widad .nav_btn:hover #garis_chat {
+    border-bottom-right-radius: 12px;
+}
+
+.ellya_widad .nav_btn_1:hover {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.ellya_widad .nav_btn_4:hover {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.ellya_widad .navigation img {
+    height: 30px;
+    margin-top: 10px;
+}
+
+.ellya_widad .bunga_ucapan {
+    position: absolute;
+    width: 270px;
+    left: -5%;
+    top: 20%;
+}
+
+.ellya_widad .bunga_ucapan2 {
+    position: absolute;
+    width: 270px;
+    right: -3%;
+    top: 20%;
+}
+
+.ellya_widad .bunga_ucapan3 {
+    position: absolute;
+    width: 225px;
+    right: 3%;
+    bottom: 20%;
+}
+
+.ellya_widad .bunga_ucapan4 {
+    position: absolute;
+    width: 225px;
+    left: 3%;
+    bottom: 5%;
+}
+
+/*
+.ellya_widad .nav_btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+} */
+
 @-webkit-keyframes fadeIn {
     0% {
         opacity: 0;
@@ -1372,7 +1467,6 @@
     .ellya_widad .note_wrapper {
         width: 80vw;
         height: 75vh;
-        z-index: 1;
     }
 
     .ellya_widad .prokes {
@@ -1652,5 +1746,75 @@
         width: 85vw;
         margin-top: -24px;
         margin-bottom: -24px;
+    }
+
+    .ellya_widad .navigation {
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        justify-content: space-around;
+        box-sizing: border-box;
+        bottom: 8.5%;
+        left: 17.5vw;
+        width: 65vw;
+        height: 56px;
+        border-radius: 12px;
+        background-color: #FAFAF7;
+        box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+        display: none;
+    }
+    
+    .ellya_widad .nav_btn {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+    
+    .ellya_widad .nav_btn:hover {
+        cursor: pointer;
+    }
+    
+    .ellya_widad .nav_btn:hover .garis {
+        background-color: #BF856E;
+        height: 5px;
+        width: 100%;
+    }
+    
+    .ellya_widad .nav_btn:hover #garis_home {
+        border-bottom-left-radius: 12px;
+    }
+    
+    .ellya_widad .nav_btn:hover #garis_chat {
+        border-bottom-right-radius: 12px;
+    }
+    
+    .ellya_widad .nav_btn_1:hover {
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+    }
+    
+    .ellya_widad .nav_btn_4:hover {
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    
+    .ellya_widad .navigation img {
+        height: 32px;
+        margin-top: 10px;
+    }
+
+    .ellya_widad .bunga_ucapan {
+        display: none;
+    }
+    
+    .ellya_widad .bunga_ucapan2 {
+        display: none;
+    }
+    
+    .ellya_widad .bunga_ucapan3 {
+        display: none;
     }
 }

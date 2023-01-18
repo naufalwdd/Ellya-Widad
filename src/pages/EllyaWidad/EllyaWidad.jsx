@@ -45,6 +45,13 @@ import DaunAkad2 from '../../assets/daun-akad2.png'
 import BungaProfil from '../../assets/bunga-profil.png'
 import DaunProfil from '../../assets/daun-profil.png'
 import UcapanHarapan from '../../assets/ucapan-harapan.png'
+import Home from '../../assets/home.png'
+import Brides from '../../assets/brides.png'
+import Warning from '../../assets/warning.png'
+import Chat from '../../assets/chat.png'
+import BungaUcapan from '../../assets/bunga-ucapan.png'
+import BungaUcapan2 from '../../assets/bunga-ucapan2.png'
+import BungaUcapan3 from '../../assets/bunga-ucapan3.png'
 
 function EllyaWidad(props) {
 
@@ -194,6 +201,7 @@ function EllyaWidad(props) {
         setIsPlaying(true)
         FadeOut()
         FadeIn()
+        document.getElementById('navigation').style.display = 'flex'
     }
 
     const FadeIn = () => {
@@ -204,6 +212,34 @@ function EllyaWidad(props) {
 
     const ScrollToMap = () => {
         var myRef = document.getElementById('myRef')
+        myRef.scrollIntoView({
+            behavior: 'smooth',
+        })
+    }
+
+    const ScrollToHome = () => {
+        var myRef = document.getElementById('greeting')
+        myRef.scrollIntoView({
+            behavior: 'smooth',
+        })
+    }
+
+    const ScrollToProfile = () => {
+        var myRef = document.getElementById('third_page')
+        myRef.scrollIntoView({
+            behavior: 'smooth',
+        })
+    }
+
+    const ScrollToProtocol = () => {
+        var myRef = document.getElementById('seventh_page')
+        myRef.scrollIntoView({
+            behavior: 'smooth',
+        })
+    }
+
+    const ScrollToChat = () => {
+        var myRef = document.getElementById('guest_card')
         myRef.scrollIntoView({
             behavior: 'smooth',
         })
@@ -242,6 +278,24 @@ function EllyaWidad(props) {
 
     return(
     <div className="ellya_widad" id="ellya_widad">
+        <div className="navigation" id='navigation'>
+            <div className='nav_btn nav_btn_1' onClick={ScrollToHome}>
+                <img src={Home} alt="" />
+                <div className="garis" id='garis_home'></div>
+            </div>
+            <div className='nav_btn' onClick={ScrollToProfile}>
+                <img src={Brides} alt="" />
+                <div className="garis" id='garis_brides'></div>
+            </div>
+            <div className='nav_btn' onClick={ScrollToProtocol}> 
+                <img src={Warning} alt="" />
+                <div className="garis" id='garis_warning'></div>
+            </div>
+            <div className='nav_btn nav_btn_4' onClick={ScrollToChat}>
+                <img src={Chat} alt="" />
+                <div className="garis" id='garis_chat'></div>
+            </div>
+        </div>
         <Sound
             url={SepertigaMalam}
             playStatus={isPlaying == true ? Sound.status.PLAYING : Sound.status.STOPPED}
@@ -298,7 +352,7 @@ function EllyaWidad(props) {
                 </div>
             </div>
         </div>
-        <div className="third_page">
+        <div className="third_page" id='third_page'>
             <img src={BottomPaper} className='top_paper_img'/>
             <img src={DaunProfil} alt="" className='daun_profil'/>
             <img src={BungaProfil} alt="" className='bunga_profil'/>
@@ -399,7 +453,13 @@ function EllyaWidad(props) {
             </form>
             <img src={BottomPaper} className='bottom_paper_img'/>
         </div>
-        <div className="seventh_page">
+        <div className="seventh_page" id='seventh_page'>
+            <img src={Daun4} alt="" className='daun_5'/>
+            <img src={Daun4} alt="" className='daun_6'/>
+            <img src={Sparkle} alt="" className='sparkle'/>
+            <img src={Sparkle} alt="" className='sparkle_2'/>
+            <img src={DaunCombine1} alt="" className='daun_combine'/>
+            <img src={DaunCombine1} alt="" className='daun_combine1'/>
             <p className='notes animate_on_scroll'>Hal Yang Harus Diperhatikan</p>
             <div className="note_wrapper animate_on_scroll">
                 <img src={Adab1} alt="" className='prokes animate_on_scroll'/>
@@ -411,12 +471,6 @@ function EllyaWidad(props) {
                 {/* <img src={Prokes3} alt="" className='prokes animate_on_scroll'/> */}
                 <img src={Prokes4} alt="" className='prokes animate_on_scroll'/>
             </div>
-            <img src={Daun4} alt="" className='daun_5'/>
-            <img src={Daun4} alt="" className='daun_6'/>
-            <img src={Sparkle} alt="" className='sparkle'/>
-            <img src={Sparkle} alt="" className='sparkle_2'/>
-            <img src={DaunCombine1} alt="" className='daun_combine'/>
-            <img src={DaunCombine1} alt="" className='daun_combine1'/>
         </div>
         {dresscode ? (<div className="eighth_page">
             <img src={BottomPaper} alt="" className='pembatas_pakaian'/>
@@ -433,14 +487,18 @@ function EllyaWidad(props) {
                 </div>
             </div>
         </div>) : ''}
-        <div className="ninth_page">
+        <div className="ninth_page" id='ninth_page'>
+            <img src={BungaUcapan} alt="" className='bunga_ucapan'/>
+            <img src={BungaUcapan2} alt="" className='bunga_ucapan2'/>
+            <img src={BungaUcapan3} alt="" className='bunga_ucapan3'/>
+            <img src={BungaUcapan3} alt="" className='bunga_ucapan4'/>
             {!dresscode ? (<img src={BottomPaper} alt="" className='pembatas_pakaian'/>) : ''}
             {!dresscode ? (<div className='margin_creater'></div>) : ''}
             {/* <p className='ucapan animate_on_scroll'>Ucapkan Sesuatu</p> */}
-            <img src={UcapanHarapan} alt="" className='ucapan_harapan'/>
-            <div className="guest_card animate_on_scroll">
+            <img src={UcapanHarapan} alt="" className='ucapan_harapan animate_on_scroll'/>
+            <div className="guest_card animate_on_scroll" id='guest_card'>
                 <div className="input_section">
-                    <label className="form_title">Nama</label>
+                    <label className="form_title" id='form_title_nama'>Nama</label>
                     <input className="name_input" id="name_input" placeholder="Nama Kamu..." onChange={(e) => setName(e.target.value)} value={name}></input>
                 </div>
                 <div className="input_section_double">
