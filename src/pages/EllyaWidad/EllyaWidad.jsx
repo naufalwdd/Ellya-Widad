@@ -40,6 +40,11 @@ import ColorPalette from '../../assets/color-palette.png'
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import ProfileIcon from '../../assets/profile.png'
+import DaunAkad from '../../assets/daun-akad.png'
+import DaunAkad2 from '../../assets/daun-akad2.png'
+import BungaProfil from '../../assets/bunga-profil.png'
+import DaunProfil from '../../assets/daun-profil.png'
+import UcapanHarapan from '../../assets/ucapan-harapan.png'
 
 function EllyaWidad(props) {
 
@@ -56,8 +61,8 @@ function EllyaWidad(props) {
     var [totalGuest, setTotalGuest] = useState('1')
     var [message, setMessage] = useState('')
     var [ucapan, setUcapan] = useState([])
-
-    var globalVal = []
+    var [akad, setAkad] = useState(true)
+    var [dresscode, setDresscode] = useState(true)
 
     const PresenceChange = event => {
         setPresence(event.target.value);
@@ -112,18 +117,33 @@ function EllyaWidad(props) {
         if (!effectRan) {
             document.title = 'Pernikahan Ellya & Widad';
             const urlParams = new URLSearchParams(queryString);
-            const name = urlParams.get('to')
-            name == null ? setGuestName('Bapak/Ibu/Saudara/Saudari') : setGuestName(name)
+            const guest = urlParams.get('to')
+            guest == null ? setGuestName('Bapak/Ibu/Saudara/Saudari') : setGuestName(guest)
             atcb_init()
             GetRSVPData()
+            GetAkadData(guest)
+            GetDresscodeData(guest)
         }
 
         setEffectRan(true)
     }, []);
 
     const GetRSVPData = () => {
-        axios.get('https://script.google.com/macros/s/AKfycbxDnzXP9ia78vt4M4EwM0tQyUdjMkMAXU4nfkOxuiAPyPwKNDcsOmqd2FBKpV_gtWrsYQ/exec').then((res) => {
+        axios.get('https://script.google.com/macros/s/AKfycbxDnzXP9ia78vt4M4EwM0tQyUdjMkMAXU4nfkOxuiAPyPwKNDcsOmqd2FBKpV_gtWrsYQ/exec?type=rsvp').then((res) => {
+            if (res.data == null) {
+                return
+            }
+
+            if (res.data.length == 0) {
+                return
+            }
             console.log(res.data);
+            setUcapan(res.data.reverse())
+        })
+    }
+
+    const GetDresscodeData = (guest) => {
+        axios.get('https://script.google.com/macros/s/AKfycbxDnzXP9ia78vt4M4EwM0tQyUdjMkMAXU4nfkOxuiAPyPwKNDcsOmqd2FBKpV_gtWrsYQ/exec?type=dresscode').then((res) => {
             if (res.data == null) {
                 return
             }
@@ -132,7 +152,41 @@ function EllyaWidad(props) {
                 return
             }
 
-            setUcapan(res.data.reverse())
+            var needDresscode = false
+
+            for (var item of res.data) {
+                if (guest.toUpperCase() == item.toUpperCase()) {
+                    needDresscode = true
+                    break
+                }
+            }
+
+            if (!needDresscode)
+                setDresscode(false)
+        })
+    }
+
+    const GetAkadData = (guest) => {
+        axios.get('https://script.google.com/macros/s/AKfycbxDnzXP9ia78vt4M4EwM0tQyUdjMkMAXU4nfkOxuiAPyPwKNDcsOmqd2FBKpV_gtWrsYQ/exec?type=akad').then((res) => {
+            if (res.data == null) {
+                return
+            }
+
+            if (res.data.length == 0) {
+                return
+            }
+
+            var needAkad = false
+
+            for (var item of res.data) {
+                if (guest.toUpperCase() == item.toUpperCase()) {
+                    needAkad = true
+                    break
+                }
+            }
+
+            if (!needAkad)
+                setAkad(false)
         })
     }
 
@@ -246,6 +300,8 @@ function EllyaWidad(props) {
         </div>
         <div className="third_page">
             <img src={BottomPaper} className='top_paper_img'/>
+            <img src={DaunProfil} alt="" className='daun_profil'/>
+            <img src={BungaProfil} alt="" className='bunga_profil'/>
             <div className="profile_section animate_on_scroll">
                 <p className='profile_intro animate_on_scroll'>Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridha-Mu tercurah mengiringi pernikahan kami.</p>
                 <div className="profile_section_item" id='ellya'>
@@ -275,8 +331,10 @@ function EllyaWidad(props) {
             </div>
         </div>
         <div className="forth_page">
-            <div className="card_wrapper">
-                <div className="card_item animate_on_scroll">
+            <img src={DaunAkad} alt="" className='daun_akad'/>
+            <img src={DaunAkad2} alt="" className='daun_akad2'/>
+            <div className={akad ? 'card_wrapper' : 'card_wrapper card_wrapper_center'}>
+                {akad ? (<div className="card_item animate_on_scroll">
                     <img src={IconAkad} className='icon_akad animate_on_scroll' />
                     <p className='akad_title animate_on_scroll'>Akad Nikah</p>
                     <p className='animate_on_scroll'>Jum'at, 3 Maret 2023</p>
@@ -285,7 +343,7 @@ function EllyaWidad(props) {
                     <p className='location animate_on_scroll'>Masjid Al-Kautsar</p>
                     <p className='location_detail animate_on_scroll'>Komplek Sukamenak Indah Blok K, Kecamatan Margahayu, Kabupaten Bandung, Jawa Barat</p>
                     <button className='btn_direction animate_on_scroll' onClick={ShowAkadMap}>Lihat Petunjuk Arah</button>
-                </div>
+                </div>) : '' }
                 <div className="card_item animate_on_scroll">
                     <img src={IconResepsi} className='icon_akad animate_on_scroll' />
                     <p className='akad_title animate_on_scroll'>Resepsi</p>
@@ -360,7 +418,7 @@ function EllyaWidad(props) {
             <img src={DaunCombine1} alt="" className='daun_combine'/>
             <img src={DaunCombine1} alt="" className='daun_combine1'/>
         </div>
-        <div className="eighth_page">
+        {dresscode ? (<div className="eighth_page">
             <img src={BottomPaper} alt="" className='pembatas_pakaian'/>
             <img src={DaunCombine2} alt="" className='daun_combine2'/>
             <img src={DaunCombine3} alt="" className='daun_combine3'/>
@@ -374,9 +432,12 @@ function EllyaWidad(props) {
                     <img src={ColorPalette} alt="" className='palette_img animate_on_scroll'/>
                 </div>
             </div>
-        </div>
+        </div>) : ''}
         <div className="ninth_page">
-            <p className='ucapan animate_on_scroll'>Ucapkan Sesuatu</p>
+            {!dresscode ? (<img src={BottomPaper} alt="" className='pembatas_pakaian'/>) : ''}
+            {!dresscode ? (<div className='margin_creater'></div>) : ''}
+            {/* <p className='ucapan animate_on_scroll'>Ucapkan Sesuatu</p> */}
+            <img src={UcapanHarapan} alt="" className='ucapan_harapan'/>
             <div className="guest_card animate_on_scroll">
                 <div className="input_section">
                     <label className="form_title">Nama</label>

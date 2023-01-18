@@ -373,13 +373,14 @@
     flex-direction: column;
     align-items: center;
     background-color: #F9D1B6;
+    position: relative;
 }
 
 .ellya_widad .third_page .profile_section {
     width: 75vw;
     margin: 0;
     height: max-content;
-    background-color: rgba(255, 255, 255, 0.358);
+    background-color: rgba(255, 255, 255, 0.621);
     margin-top: 45px;
     border-radius: 24px;
     box-sizing: border-box;
@@ -478,8 +479,10 @@
     height: 100vh;
     background-color: #F9D1B6;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .ellya_widad .forth_page .card_wrapper {
@@ -492,9 +495,13 @@
     justify-content: space-between;
 }
 
+.ellya_widad .forth_page .card_wrapper_center {
+    justify-content: center;
+}
+
 .ellya_widad .forth_page .card_item {
     width: 49%;
-    background-color: rgba(255, 255, 255, 0.358);
+    background-color: rgba(255, 255, 255, 0.621);
     border-radius: 24px;
     display: flex;
     flex-direction: column;
@@ -721,7 +728,7 @@
     background-color: #F9D1B6;
 }
 
-.ellya_widad .eighth_page .pembatas_pakaian {
+.ellya_widad .pembatas_pakaian {
     position: absolute;
     top: -0.1%;
     width: 100vw;
@@ -729,6 +736,14 @@
 }
 
 .ellya_widad .eighth_page .pakaian {
+    font-size: 48px;
+    text-align: center;
+    font-family: 'Alike';
+    color: #604329;
+    margin-bottom: 20px;
+}
+
+.ellya_widad .lokasi {
     font-size: 48px;
     text-align: center;
     font-family: 'Alike';
@@ -800,6 +815,16 @@
     height: max-content;
     width: 100vw;
     background-color: #F9D1B6;
+}
+
+.ellya_widad .ucapan_harapan {
+    width: 50vw;
+    margin-top: -64px;
+    margin-bottom: -64px;
+}
+
+.ellya_widad .margin_creater {
+    margin-top: 15vh;
 }
 
 .ellya_widad .ninth_page .guest_card {
@@ -1017,6 +1042,34 @@
     font-size: 14px;
 }
 
+.ellya_widad .daun_akad {
+    position: absolute;
+    width: 300px;
+    left: -2%;
+    top: 20%
+}
+
+.ellya_widad .daun_akad2 {
+    position: absolute;
+    width: 300px;
+    right: -5%;
+    bottom: 10%
+}
+
+.ellya_widad .daun_profil {
+    position: absolute;
+    width: 350px;
+    left: -7%;
+    bottom: 15%
+}
+
+.ellya_widad .bunga_profil {
+    position: absolute;
+    width: 380px;
+    right: -5%;
+    bottom: 5%
+}
+
 @-webkit-keyframes fadeIn {
     0% {
         opacity: 0;
@@ -1223,7 +1276,7 @@
 
     .ellya_widad .forth_page .card_wrapper {
         width: 85vw;
-        height: max-content;
+        height: 100vh;
         margin-left: 0;
         flex-direction: column;
         justify-content: center;
@@ -1455,6 +1508,12 @@
         margin-top: -20%;
     }
 
+    .ellya_widad .lokasi {
+        font-size: 26px;
+        margin-top: -20%;
+    }
+
+
     .ellya_widad .ninth_page .ucapan {
         font-size: 26px;
         margin-top: -20%;
@@ -1563,5 +1622,35 @@
 
     .ellya_widad .msg {
         width: 82%;
+    }
+
+    .ellya_widad .daun_akad {
+        width: 240px;
+        left: -10%;
+        top: 5%
+    }
+    
+    .ellya_widad .daun_akad2 {
+        width: 240px;
+        right: -15%;
+        bottom: 5%
+    }
+    
+    .ellya_widad .daun_profil {
+        width: 300px;
+        left: -22%;
+        bottom: 15%
+    }
+    
+    .ellya_widad .bunga_profil {
+        width: 300px;
+        right: -17%;
+        top: 15%
+    }
+
+    .ellya_widad .ucapan_harapan {
+        width: 85vw;
+        margin-top: -24px;
+        margin-bottom: -24px;
     }
 }
