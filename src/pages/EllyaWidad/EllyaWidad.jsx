@@ -83,6 +83,11 @@ function EllyaWidad(props) {
         sentUcapan['TotalGuest'] = totalGuest
         sentUcapan['Message'] = message
 
+        if (name == '') {
+            window.alert('Nama harus diisi')
+            return
+        }
+
         axios.post('https://script.google.com/macros/s/AKfycbxDnzXP9ia78vt4M4EwM0tQyUdjMkMAXU4nfkOxuiAPyPwKNDcsOmqd2FBKpV_gtWrsYQ/exec', postData).then((response) => {
             console.log(response);
             setName('')
@@ -90,6 +95,7 @@ function EllyaWidad(props) {
             setTotalGuest('1')
             setMessage('')
             GetRSVPData()
+            window.alert('Data berhasil dikirim')
         })
     }
 
@@ -370,6 +376,7 @@ function EllyaWidad(props) {
             </div>
         </div>
         <div className="ninth_page">
+            <p className='ucapan animate_on_scroll'>Ucapkan Sesuatu</p>
             <div className="guest_card animate_on_scroll">
                 <div className="input_section">
                     <label className="form_title">Nama</label>
