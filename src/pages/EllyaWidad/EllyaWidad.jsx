@@ -201,13 +201,15 @@ function EllyaWidad(props) {
         setIsPlaying(true)
         FadeOut()
         FadeIn()
-        document.getElementById('navigation').style.display = 'flex'
     }
 
     const FadeIn = () => {
         document.getElementById('first_page_title_img').style.animation = 'fadeIn 3.25s'
         document.getElementById('our_name_img').style.animation = 'fadeIn 3.25s'
         document.getElementById('marry_date').style.animation = 'fadeIn 3.25s'
+        document.getElementById('navigation').style.animation = 'fadeIn2 2s'
+        document.getElementById("navigation").style.animationFillMode = 'forwards'
+        document.getElementById('navigation').style.display = 'flex'
     }
 
     const ScrollToMap = () => {
