@@ -1519,6 +1519,7 @@
     .ellya_widad .ninth_page .guest_card {
         width: 85vw;
         box-sizing: border-box;
+        padding: 10px;
     }
 
     .ellya_widad .msg_header .guest_name {
@@ -1536,7 +1537,8 @@
     }
 
     .ellya_widad .ninth_page .message_card {
-        padding: 10px;
+        padding: 16px;
+        padding-right: 10px;
     }
 
     .ellya_widad .msg_header .presence {
