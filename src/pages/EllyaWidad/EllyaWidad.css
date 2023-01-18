@@ -1839,4 +1839,10 @@
     .ellya_widad .bunga_ucapan4 {
         display: none;
     }
+
+    .ellya_widad .footer {
+        height: 9vh;
+        align-items: flex-start;
+        padding-top: 5px;
+    }
 }
