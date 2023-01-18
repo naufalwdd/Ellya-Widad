@@ -1040,7 +1040,7 @@
  }
 
 /* TAB SIZE */
-@media only screen and (max-width: 720px) {
+/* @media only screen and (max-width: 720px) {
     .ellya_widad .greeting {
         background-size: 100vh;
         background-color: #FDFBFC;
@@ -1084,10 +1084,10 @@
     .ellya_widad .first_page .bottom_paper_img {
         height: 80px;
     }
-}
+} */
 
 /* MOBILE SIZE */
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 720px) {
     .ellya_widad #yth {
         font-size: 16px;
     }
