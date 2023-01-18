@@ -101,7 +101,6 @@ function EllyaWidad(props) {
         }
 
         axios.post('https://script.google.com/macros/s/AKfycbxDnzXP9ia78vt4M4EwM0tQyUdjMkMAXU4nfkOxuiAPyPwKNDcsOmqd2FBKpV_gtWrsYQ/exec', postData).then((response) => {
-            console.log(response);
             setName('')
             setPresence('ya')
             setTotalGuest('1')
@@ -144,7 +143,6 @@ function EllyaWidad(props) {
             if (res.data.length == 0) {
                 return
             }
-            console.log(res.data);
             setUcapan(res.data.reverse())
         })
     }
