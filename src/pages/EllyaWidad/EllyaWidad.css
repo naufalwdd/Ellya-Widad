@@ -1256,7 +1256,7 @@
     position: absolute;
     z-index: 1;
     top: 1%;
-    width: 300px;
+    width: 20%;
 }
 
 .ellya_widad .thankful {
@@ -2013,5 +2013,13 @@
     
     .ellya_widad #thankful_content {
         margin-top: 40px;
+    }
+
+    .ellya_widad .frame_bg {
+        height: 32px;
+    }
+
+    .ellya_widad .ornamen_pembatas {
+        width: 35%;
     }
 }
