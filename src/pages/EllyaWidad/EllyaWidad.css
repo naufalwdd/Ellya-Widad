@@ -870,7 +870,6 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: max-content;
     width: 100vw;
@@ -1132,7 +1131,7 @@
 
 .ellya_widad .navigation {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     justify-content: space-around;
     box-sizing: border-box;
@@ -1896,8 +1895,7 @@
 
     .ellya_widad .ucapan_harapan {
         width: 85vw;
-        margin-top: -24px;
-        margin-bottom: -24px;
+        transform: translateY(-48px);
     }
 
     .ellya_widad .navigation {
@@ -1991,14 +1989,14 @@
     .ellya_widad .sparkle_kiri {
         position: absolute;
         top: 42%;
-        left: -24%;
+        left: -20%;
         width: 160px;
     }
     
     .ellya_widad .sparkle_kanan {
         position: absolute;
         top: 42%;
-        right: -17%;
+        right: -15%;
         width: 120px;
     }
 
@@ -2022,5 +2020,17 @@
 
     .ellya_widad .ornamen_pembatas {
         width: 35%;
+    }
+
+    .ellya_widad .powered {
+        font-size: 14px;
+    }
+
+    .ellya_widad .fav {
+        width: 32px;
+    }
+
+    .ellya_widad .our_name {
+        width: 70vw;
     }
 }

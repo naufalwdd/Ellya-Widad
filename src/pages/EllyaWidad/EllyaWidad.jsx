@@ -404,7 +404,8 @@ function EllyaWidad(props) {
                     <p className='animate_on_scroll'>Sabtu, 4 Maret 2023</p>
                     <p className='time animate_on_scroll'>10.00 - 13.00 WIB</p>
                     <img src={DaunPembatas} className='icon_pembatas animate_on_scroll'/>
-                    <p className='location animate_on_scroll'>Kopo Square</p>
+                    <p className='location animate_on_scroll'>Hall A</p>
+                    <p className='location animate_on_scroll'>La Gardena Kopo Square</p>
                     <p className='location_detail animate_on_scroll'>Jalan Raya Kopo Sayati No.45, Sayati, Kecamatan Margahayu, Kabupaten Bandung, Jawa Barat</p>
                     <button className='btn_direction animate_on_scroll' onClick={ShowResepsiMap}>Lihat Petunjuk Arah</button>
                 </div>
@@ -546,12 +547,12 @@ function EllyaWidad(props) {
         <div className="tenth_page" id='tenth_page'>
             <img src={OrnamenPembatas} className="ornamen_pembatas"/>
             <div className='frame_bg'></div>
-            <p className='thankful' id='thankful_header'>Atas kehadiran dan do'a restu dari Bapak/Ibu/Saudara/i, kami mengucapkan terima kasih.</p>
-            <p className='thankful' id='thankful_content'>Kami yang berbahagia,</p>
+            <p className='thankful animate_on_scroll' id='thankful_header'>Atas kehadiran dan do'a restu dari Bapak/Ibu/Saudara/i, kami mengucapkan terima kasih.</p>
+            <p className='thankful animate_on_scroll' id='thankful_content'>Kami yang berbahagia,</p>
             <picture>
                 <source media="(min-width: 720px)" srcSet={OurName}/>
                 <source media="(max-width: 720px)" srcSet={OurNamePortrait}/>
-                <img src="OtherImage.png" alt="PictureDoesNotMatchAny" className='our_name'></img>
+                <img src="OtherImage.png" alt="PictureDoesNotMatchAny" className='our_name animate_on_scroll'></img>
             </picture>
             <img src={Favicon} className="fav"/>
             <p className='powered'>Powered by Resepsi Kami</p>
