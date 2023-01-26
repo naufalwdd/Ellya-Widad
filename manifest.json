@@ -3,19 +3,34 @@
   "name": "Resepsi Kami",
   "icons": [
     {
-      "src": "favicon.png",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
-    },
-    {
-      "src": "favicon.png",
+      "src": "favicon192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "favicon.png",
+      "src": "favicon512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "favicon64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon24.png",
+      "type": "image/png",
+      "sizes": "24x24"
+    },
+    {
+      "src": "favicon16.png",
+      "type": "image/png",
+      "sizes": "16x16"
     }
   ],
   "start_url": ".",
