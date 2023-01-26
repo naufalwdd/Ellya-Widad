@@ -52,6 +52,8 @@ import Chat from '../../assets/chat.png'
 import BungaUcapan from '../../assets/bunga-ucapan.png'
 import OrnamenPembatas from '../../assets/ornamen-pembatas.png'
 import Favicon from '../../assets/favicon.png'
+import CornerOrnament from '../../assets/corner_ornament.png'
+import CornerOrnament2 from '../../assets/corner_ornament2.png'
 
 function EllyaWidad(props) {
 
@@ -545,6 +547,8 @@ function EllyaWidad(props) {
             </div>
         </div>
         <div className="tenth_page" id='tenth_page'>
+            <img src={CornerOrnament} className='corner_1'/>
+            <img src={CornerOrnament2} className='corner_2'/>
             <img src={OrnamenPembatas} className="ornamen_pembatas"/>
             <div className='frame_bg'></div>
             <p className='thankful animate_on_scroll' id='thankful_header'>Atas kehadiran dan do'a restu dari Bapak/Ibu/Saudara/i, kami mengucapkan terima kasih.</p>

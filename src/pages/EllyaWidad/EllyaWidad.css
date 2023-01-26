@@ -1289,6 +1289,20 @@
     margin-top: 48px;
 }
 
+.ellya_widad .corner_1 {
+    width: 400px;
+    position: absolute;
+    bottom: 0;
+    right: -1%;
+}
+
+.ellya_widad .corner_2 {
+    width: 400px;
+    position: absolute;
+    top: 7%;
+    left: -3%;
+}
+
 /*
 .ellya_widad .nav_btn {
     display: flex;
@@ -2032,5 +2046,19 @@
 
     .ellya_widad .our_name {
         width: 70vw;
+    }
+
+    .ellya_widad .corner_1 {
+        width: 200px;
+        position: absolute;
+        bottom: 6.5%;
+        right: -3.5%;
+    }
+    
+    .ellya_widad .corner_2 {
+        width: 200px;
+        position: absolute;
+        top: 3%;
+        left: -4%;
     }
 }
