@@ -1261,8 +1261,9 @@
 
 .ellya_widad .thankful {
     color: white;
-    font-size: 28px;
+    font-size: 24px;
     text-align: center;
+    font-weight: 400;
 }
 
 .ellya_widad #thankful_header {
@@ -2003,7 +2004,7 @@
 
     .ellya_widad .thankful {
         color: white;
-        font-size: 20px;
+        font-size: 17px;
         text-align: center;
     }
     
