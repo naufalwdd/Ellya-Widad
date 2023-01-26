@@ -1,7 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alike&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@font-face {
+    font-family: 'Alike';
+    src: url('../../fonts/Alike-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../fonts/Poppins-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../fonts/Poppins-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../fonts/Poppins-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../fonts/Poppins-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../../fonts/PlayfairDisplay-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
 
 :root {
     color-scheme: only light;
@@ -70,7 +130,7 @@
 }
 
 .ellya_widad p {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     margin: 0;
 }
 
@@ -87,7 +147,7 @@
     width: 180px;
     border-radius: 12px;
     height: 40px;
-    font-family: 'Alike', serif;
+    font-family: 'Alike';
     font-size: 18px;
     color: white;
     margin-top: 16px;
@@ -127,13 +187,13 @@
     width: 50%;
 }
 
-.ellya_widad .first_page picture {
+.ellya_widad picture {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.ellya_widad .first_page #our_name_img {
+.ellya_widad #our_name_img {
     margin-top: 40px;
     width: 70%;
 }
@@ -469,7 +529,7 @@
 }
 
 .ellya_widad .third_page .profile_name {
-    font-family: 'Alike', serif;
+    font-family: 'Alike';
     font-style: normal;
     font-size: 28px;
     font-weight: 700;
@@ -1132,7 +1192,7 @@
 .ellya_widad .bunga_ucapan {
     position: absolute;
     width: 270px;
-    left: -5%;
+    left: -3%;
     top: 20%;
 }
 
@@ -1147,14 +1207,86 @@
     position: absolute;
     width: 225px;
     right: 3%;
-    bottom: 20%;
+    bottom: 15%;
 }
 
 .ellya_widad .bunga_ucapan4 {
     position: absolute;
     width: 225px;
     left: 3%;
-    bottom: 5%;
+    bottom: 2.5%;
+}
+
+.ellya_widad .tenth_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #BF856E;
+}
+
+.ellya_widad .sparkle_kiri {
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    width: 320px;
+}
+
+.ellya_widad .sparkle_kanan {
+    position: absolute;
+    top: 25%;
+    right: -10%;
+    width: 320px;
+}
+
+.ellya_widad .frame_bg {
+    width: 100vw;
+    height: 56px;
+    background-color: #FFF5DE;
+    position: absolute;
+    top: 0%;
+}
+
+.ellya_widad .ornamen_pembatas {
+    position: absolute;
+    z-index: 1;
+    top: 1%;
+    width: 300px;
+}
+
+.ellya_widad .thankful {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+}
+
+.ellya_widad #thankful_header {
+    width: 60vw;
+}
+
+.ellya_widad #thankful_content {
+    margin-top: 40px;
+}
+
+.ellya_widad .fav {
+    width: 40px;
+    margin-top: 40px;
+}
+
+.ellya_widad .powered {
+    font-family: 'Lato';
+    color: white;
+    margin-top: 5px;
+}
+
+.ellya_widad .our_name {
+    width: 60vw;
+    margin-top: 48px;
 }
 
 /*
@@ -1556,7 +1688,7 @@
         width: 27.5%;
     }
 
-    .ellya_widad .first_page #our_name_img {
+    .ellya_widad #our_name_img {
         width: 80%;
         margin-top: 0px;
     }
@@ -1826,15 +1958,23 @@
     }
 
     .ellya_widad .bunga_ucapan {
-        display: none;
+        /* display: none; */
+        top: 50%;
+        width: 150px;
     }
     
     .ellya_widad .bunga_ucapan2 {
-        display: none;
+        /* display: none; */
+        top: 25%;
+        right: -6%;
+        width: 150px;
     }
     
     .ellya_widad .bunga_ucapan3 {
-        display: none;
+        /* display: none; */
+        bottom: 10%;
+        right: -2%;
+        width: 150px;
     }
 
     .ellya_widad .bunga_ucapan4 {
@@ -1845,5 +1985,33 @@
         height: 9vh;
         align-items: flex-start;
         padding-top: 5px;
+    }
+
+    .ellya_widad .sparkle_kiri {
+        position: absolute;
+        top: 42%;
+        left: -24%;
+        width: 160px;
+    }
+    
+    .ellya_widad .sparkle_kanan {
+        position: absolute;
+        top: 42%;
+        right: -17%;
+        width: 120px;
+    }
+
+    .ellya_widad .thankful {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .ellya_widad #thankful_header {
+        width: 80vw;
+    }
+    
+    .ellya_widad #thankful_content {
+        margin-top: 40px;
     }
 }

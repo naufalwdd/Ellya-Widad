@@ -50,8 +50,8 @@ import Brides from '../../assets/brides.png'
 import Warning from '../../assets/warning.png'
 import Chat from '../../assets/chat.png'
 import BungaUcapan from '../../assets/bunga-ucapan.png'
-import BungaUcapan2 from '../../assets/bunga-ucapan2.png'
-import BungaUcapan3 from '../../assets/bunga-ucapan3.png'
+import OrnamenPembatas from '../../assets/ornamen-pembatas.png'
+import Favicon from '../../assets/favicon.png'
 
 function EllyaWidad(props) {
 
@@ -429,6 +429,8 @@ function EllyaWidad(props) {
             }
         </div>
         <div className="sixth_page">
+            <img src={SparkleCream} className='sparkle_kiri animate_on_scroll'/>
+            <img src={SparkleCream} className='sparkle_kanan animate_on_scroll'/>
             <p className='countdown animate_on_scroll'>Menuju Hari Yang Ditunggu</p>
             <div className="countdown_wrapper animate_on_scroll">
                 <div className="countdown_line"></div>
@@ -489,9 +491,9 @@ function EllyaWidad(props) {
         </div>) : ''}
         <div className="ninth_page" id='ninth_page'>
             <img src={BungaUcapan} alt="" className='bunga_ucapan'/>
-            <img src={BungaUcapan2} alt="" className='bunga_ucapan2'/>
-            <img src={BungaUcapan3} alt="" className='bunga_ucapan3'/>
-            <img src={BungaUcapan3} alt="" className='bunga_ucapan4'/>
+            <img src={BungaUcapan} alt="" className='bunga_ucapan2'/>
+            <img src={BungaUcapan} alt="" className='bunga_ucapan3'/>
+            <img src={BungaUcapan} alt="" className='bunga_ucapan4'/>
             {!dresscode ? (<img src={BottomPaper} alt="" className='pembatas_pakaian'/>) : ''}
             {!dresscode ? (<div className='margin_creater'></div>) : ''}
             {/* <p className='ucapan animate_on_scroll'>Ucapkan Sesuatu</p> */}
@@ -540,9 +542,19 @@ function EllyaWidad(props) {
                     </div>
                 </div>) : ''}
             </div>
-            <div className="footer">
-                <p className='footer_text'>Powered by Resepsi Kami</p>
-            </div>
+        </div>
+        <div className="tenth_page" id='tenth_page'>
+            <img src={OrnamenPembatas} className="ornamen_pembatas"/>
+            <div className='frame_bg'></div>
+            <p className='thankful' id='thankful_header'>Atas kehadiran dan do'a restu dari Bapak/Ibu/Saudara/i, kami mengucapkan terima kasih.</p>
+            <p className='thankful' id='thankful_content'>Kami yang berbahagia,</p>
+            <picture>
+                <source media="(min-width: 720px)" srcSet={OurName}/>
+                <source media="(max-width: 720px)" srcSet={OurNamePortrait}/>
+                <img src="OtherImage.png" alt="PictureDoesNotMatchAny" className='our_name'></img>
+            </picture>
+            <img src={Favicon} className="fav"/>
+            <p className='powered'>Powered by Resepsi Kami</p>
         </div>
     </div>
     )
