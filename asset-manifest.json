@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c986ae57.css",
-    "main.js": "/static/js/main.3ce9dd5f.js",
+    "main.css": "/static/css/main.34030b74.css",
+    "main.js": "/static/js/main.bee0619d.js",
     "static/js/787.342f8852.chunk.js": "/static/js/787.342f8852.chunk.js",
     "static/media/di-sepertiga-malam.mp3": "/static/media/di-sepertiga-malam.83a1c48fe990bf4f08aa.mp3",
     "static/media/ellya-widad-cover.svg": "/static/media/ellya-widad-cover.dd84ce1885afe3b800d0.svg",
@@ -24,11 +24,13 @@
     "static/media/sparkle-cream.png": "/static/media/sparkle-cream.9a7fc273cfc680b896ea.png",
     "static/media/PlayfairDisplay-MediumItalic.ttf": "/static/media/PlayfairDisplay-MediumItalic.69c89309175b14e01cc3.ttf",
     "static/media/Poppins-BoldItalic.ttf": "/static/media/Poppins-BoldItalic.cfb635a5111b545f5598.ttf",
+    "static/media/corner_ornament2.png": "/static/media/corner_ornament2.1e16548da395d0b708c9.png",
     "static/media/Poppins-Regular.ttf": "/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
     "static/media/ucapan-harapan.png": "/static/media/ucapan-harapan.79ce2058453af6116728.png",
     "static/media/Poppins-Medium.ttf": "/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
     "static/media/Poppins-SemiBold.ttf": "/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
     "static/media/Poppins-Bold.ttf": "/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
+    "static/media/corner_ornament.png": "/static/media/corner_ornament.2557f3276c898446b84b.png",
     "static/media/daun-combine3.png": "/static/media/daun-combine3.0015fd7e0dbd7d6413c6.png",
     "static/media/daun-combine2.png": "/static/media/daun-combine2.e8a904e2e79d4e8b1442.png",
     "static/media/bunga-profil.png": "/static/media/bunga-profil.83f3f48b7248988933d9.png",
@@ -56,12 +58,12 @@
     "static/media/favicon.png": "/static/media/favicon.473dc19d739c49e43296.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.c986ae57.css.map": "/static/css/main.c986ae57.css.map",
-    "main.3ce9dd5f.js.map": "/static/js/main.3ce9dd5f.js.map",
+    "main.34030b74.css.map": "/static/css/main.34030b74.css.map",
+    "main.bee0619d.js.map": "/static/js/main.bee0619d.js.map",
     "787.342f8852.chunk.js.map": "/static/js/787.342f8852.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c986ae57.css",
-    "static/js/main.3ce9dd5f.js"
+    "static/css/main.34030b74.css",
+    "static/js/main.bee0619d.js"
   ]
 }
