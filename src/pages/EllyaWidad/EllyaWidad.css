@@ -1454,7 +1454,7 @@
         box-sizing: border-box;
         align-self: flex-start;
         margin: 0;
-        margin-left: -60px;
+        margin-left: -70px;
         margin-bottom: -20px;
     }
 
@@ -1989,14 +1989,14 @@
     .ellya_widad .sparkle_kiri {
         position: absolute;
         top: 42%;
-        left: -20%;
+        left: -15%;
         width: 160px;
     }
     
     .ellya_widad .sparkle_kanan {
         position: absolute;
         top: 42%;
-        right: -15%;
+        right: -5%;
         width: 120px;
     }
 

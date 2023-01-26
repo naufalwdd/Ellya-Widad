@@ -430,8 +430,8 @@ function EllyaWidad(props) {
             }
         </div>
         <div className="sixth_page">
-            <img src={SparkleCream} className='sparkle_kiri animate_on_scroll'/>
-            <img src={SparkleCream} className='sparkle_kanan animate_on_scroll'/>
+            <img src={SparkleCream} className='sparkle_kiri'/>
+            <img src={SparkleCream} className='sparkle_kanan'/>
             <p className='countdown animate_on_scroll'>Menuju Hari Yang Ditunggu</p>
             <div className="countdown_wrapper animate_on_scroll">
                 <div className="countdown_line"></div>
