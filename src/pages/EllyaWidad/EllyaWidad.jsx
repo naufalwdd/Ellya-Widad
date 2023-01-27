@@ -234,7 +234,7 @@ function EllyaWidad(props) {
     }
 
     const ScrollToProtocol = () => {
-        var myRef = document.getElementById('seventh_page')
+        var myRef = document.getElementById('seventh_page_ref')
         myRef.scrollIntoView({
             behavior: 'smooth',
         })
@@ -459,6 +459,7 @@ function EllyaWidad(props) {
             <img src={BottomPaper} className='bottom_paper_img'/>
         </div>
         <div className="seventh_page" id='seventh_page'>
+            <div className="seventh_page_ref" id='seventh_page_ref'>ref</div>
             <img src={Daun4} alt="" className='daun_5'/>
             <img src={Daun4} alt="" className='daun_6'/>
             <img src={Sparkle} alt="" className='sparkle'/>
@@ -493,6 +494,7 @@ function EllyaWidad(props) {
             </div>
         </div>) : ''}
         <div className="ninth_page" id='ninth_page'>
+            <div className="ninth_page_ref" id="ninth_page_ref">ref</div>
             <img src={BungaUcapan} alt="" className='bunga_ucapan'/>
             <img src={BungaUcapan} alt="" className='bunga_ucapan2'/>
             <img src={BungaUcapan} alt="" className='bunga_ucapan3'/>
