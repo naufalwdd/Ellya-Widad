@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.2c10edf9.css",
+    "main.css": "/static/css/main.a65b5919.css",
     "main.js": "/static/js/main.a3b42d87.js",
     "static/js/787.342f8852.chunk.js": "/static/js/787.342f8852.chunk.js",
     "static/media/di-sepertiga-malam.mp3": "/static/media/di-sepertiga-malam.83a1c48fe990bf4f08aa.mp3",
@@ -58,12 +58,12 @@
     "static/media/favicon.png": "/static/media/favicon.473dc19d739c49e43296.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.2c10edf9.css.map": "/static/css/main.2c10edf9.css.map",
+    "main.a65b5919.css.map": "/static/css/main.a65b5919.css.map",
     "main.a3b42d87.js.map": "/static/js/main.a3b42d87.js.map",
     "787.342f8852.chunk.js.map": "/static/js/787.342f8852.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c10edf9.css",
+    "static/css/main.a65b5919.css",
     "static/js/main.a3b42d87.js"
   ]
 }
