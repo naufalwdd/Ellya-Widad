@@ -1915,7 +1915,6 @@
 
     .ellya_widad .navigation {
         position: fixed;
-        z-index: 1;
         display: flex;
         justify-content: space-around;
         box-sizing: border-box;
