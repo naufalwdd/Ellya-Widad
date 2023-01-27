@@ -68,11 +68,15 @@
 }
 
 .seventh_page_ref {
-    display: none;
+    position: absolute;
+    z-index: -1;
+    display: block;
+    margin-top: -5%;
 }
 
 .ninth_page_ref {
-    display: none;
+    position: absolute;
+    top: 8%;
 }
 
 .ellya_widad {
@@ -1410,6 +1414,18 @@
 
 /* MOBILE SIZE */
 @media only screen and (max-width: 720px) {
+    .ninth_page_ref {
+        position: absolute;
+        top: -7.5%;
+    }
+
+    .seventh_page_ref {
+        position: absolute;
+        z-index: -1;
+        display: block;
+        margin-top: -5%;
+    }
+
     .ellya_widad #yth {
         font-size: 16px;
     }
@@ -2082,7 +2098,8 @@
     }
 
     .ellya_widad .forth_page {
-        height: 100vh;
+        min-height: 100vh;
+        height: max-content;
     }
 
     .ellya_widad .forth_page .card_wrapper {
@@ -2267,13 +2284,11 @@
         position: absolute;
         z-index: -1;
         display: block;
-        margin-top: -36px;
+        margin-top: -5%;
     }
 
     .ninth_page_ref {
         position: absolute;
-        z-index: -1;
-        display: block;
-        margin-top: -24px;
+        top: 2%;
     }
 }

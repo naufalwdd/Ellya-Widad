@@ -241,7 +241,7 @@ function EllyaWidad(props) {
     }
 
     const ScrollToChat = () => {
-        var myRef = document.getElementById('guest_card')
+        var myRef = document.getElementById('ninth_page_ref')
         myRef.scrollIntoView({
             behavior: 'smooth',
         })
@@ -459,7 +459,7 @@ function EllyaWidad(props) {
             <img src={BottomPaper} className='bottom_paper_img'/>
         </div>
         <div className="seventh_page" id='seventh_page'>
-            <div className="seventh_page_ref" id='seventh_page_ref'>ref</div>
+            <div className="seventh_page_ref" id='seventh_page_ref'></div>
             <img src={Daun4} alt="" className='daun_5'/>
             <img src={Daun4} alt="" className='daun_6'/>
             <img src={Sparkle} alt="" className='sparkle'/>
@@ -494,7 +494,7 @@ function EllyaWidad(props) {
             </div>
         </div>) : ''}
         <div className="ninth_page" id='ninth_page'>
-            <div className="ninth_page_ref" id="ninth_page_ref">ref</div>
+            <div className="ninth_page_ref" id='ninth_page_ref'></div>
             <img src={BungaUcapan} alt="" className='bunga_ucapan'/>
             <img src={BungaUcapan} alt="" className='bunga_ucapan2'/>
             <img src={BungaUcapan} alt="" className='bunga_ucapan3'/>
@@ -502,7 +502,7 @@ function EllyaWidad(props) {
             {!dresscode ? (<img src={BottomPaper} alt="" className='pembatas_pakaian'/>) : ''}
             {!dresscode ? (<div className='margin_creater'></div>) : ''}
             {/* <p className='ucapan animate_on_scroll'>Ucapkan Sesuatu</p> */}
-            <img src={UcapanHarapan} alt="" className='ucapan_harapan animate_on_scroll'/>
+            <img src={UcapanHarapan} alt="" className='ucapan_harapan animate_on_scroll' id='img_ref'/>
             <div className="guest_card animate_on_scroll" id='guest_card'>
                 <div className="input_section">
                     <label className="form_title" id='form_title_nama'>Nama</label>
