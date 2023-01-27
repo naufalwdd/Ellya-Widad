@@ -168,8 +168,9 @@ function EllyaWidad(props) {
                 }
             }
 
-            if (!needDresscode)
+            if (!needDresscode) {
                 setDresscode(false)
+            }
         })
     }
 
@@ -241,7 +242,7 @@ function EllyaWidad(props) {
     }
 
     const ScrollToChat = () => {
-        var myRef = document.getElementById('ninth_page_ref')
+        var myRef = document.getElementById('img_ref')
         myRef.scrollIntoView({
             behavior: 'smooth',
         })
@@ -494,7 +495,6 @@ function EllyaWidad(props) {
             </div>
         </div>) : ''}
         <div className="ninth_page" id='ninth_page'>
-            <div className="ninth_page_ref" id='ninth_page_ref'></div>
             <img src={BungaUcapan} alt="" className='bunga_ucapan'/>
             <img src={BungaUcapan} alt="" className='bunga_ucapan2'/>
             <img src={BungaUcapan} alt="" className='bunga_ucapan3'/>

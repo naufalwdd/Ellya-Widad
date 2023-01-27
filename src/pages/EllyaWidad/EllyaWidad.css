@@ -74,11 +74,6 @@
     margin-top: -5%;
 }
 
-.ninth_page_ref {
-    position: absolute;
-    top: 8%;
-}
-
 .ellya_widad {
     min-height: 100vh;
     height: 100vh;
@@ -886,12 +881,11 @@
     height: max-content;
     width: 100vw;
     background-color: #F9D1B6;
+
 }
 
 .ellya_widad .ucapan_harapan {
     width: 50vw;
-    margin-top: -64px;
-    margin-bottom: -64px;
 }
 
 .ellya_widad .margin_creater {
@@ -1414,11 +1408,6 @@
 
 /* MOBILE SIZE */
 @media only screen and (max-width: 720px) {
-    .ninth_page_ref {
-        position: absolute;
-        top: -7.5%;
-    }
-
     .seventh_page_ref {
         position: absolute;
         z-index: -1;
@@ -1934,7 +1923,7 @@
 
     .ellya_widad .ucapan_harapan {
         width: 85vw;
-        transform: translateY(-48px);
+        margin-bottom: 10px;
     }
 
     .ellya_widad .navigation {
@@ -2285,10 +2274,5 @@
         z-index: -1;
         display: block;
         margin-top: -5%;
-    }
-
-    .ninth_page_ref {
-        position: absolute;
-        top: 2%;
     }
 }
