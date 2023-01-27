@@ -366,7 +366,7 @@ function EllyaWidad(props) {
                             <img src={ProfileEllya} alt="" />
                         </div>
                         <p className='profile_name animate_on_scroll'>Ellya Safaatun Ni'mah</p>
-                        <p className='profile_desc animate_on_scroll'>Putri kedua Bapak Suharyo dan Ibu Suwantini</p>
+                        <p className='profile_desc animate_on_scroll'>Putri dari Bapak Suharyo dan Ibu Suwantini</p>
                         <div className="ig_btn animate_on_scroll" onClick={() => document.location.href='https://www.instagram.com/ellyasafaa/'}>
                             <img src={InstagramIcon} className='ig_icon'/>
                             <p>@ellyasafaa</p>
@@ -377,7 +377,7 @@ function EllyaWidad(props) {
                             <img src={ProfileWidad} alt="" />
                         </div>
                         <p className='profile_name animate_on_scroll'>Muhammad Naufal Widad</p>
-                        <p className='profile_desc animate_on_scroll'>Putra pertama Bapak Deni Rochendi S. dan Ibu Nenden Kusdini</p>
+                        <p className='profile_desc animate_on_scroll'>Putra dari Bapak Deni Rochendi S. dan Ibu Nenden Kusdini</p>
                         <div className="ig_btn animate_on_scroll" onClick={() => document.location.href='https://www.instagram.com/naufalwdd/'}>
                             <img src={InstagramIcon} className='ig_icon'/>
                             <p>@naufalwdd</p>
