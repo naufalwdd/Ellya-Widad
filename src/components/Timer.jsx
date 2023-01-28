@@ -8,7 +8,7 @@ const Timer = () => {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-  const d_day = "2023-03-04 10:00:00";
+  const d_day = new Date(2023,2,4,10);
 
   const getTime = () => {
     const time = Date.parse(d_day) - Date.now();

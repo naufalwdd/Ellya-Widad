@@ -881,7 +881,6 @@
     height: max-content;
     width: 100vw;
     background-color: #F9D1B6;
-
 }
 
 .ellya_widad .ucapan_harapan {
@@ -1924,6 +1923,7 @@
     .ellya_widad .ucapan_harapan {
         width: 85vw;
         margin-bottom: 10px;
+        margin-top: -24px;
     }
 
     .ellya_widad .navigation {
