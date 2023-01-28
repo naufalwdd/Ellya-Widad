@@ -11,7 +11,7 @@ const Timer = () => {
   const d_day = new Date(2023,2,4,10);
 
   const getTime = () => {
-    const time = Date.parse(d_day) - Date.now();
+    const time = d_day - Date.now();
 
     setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
     setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
