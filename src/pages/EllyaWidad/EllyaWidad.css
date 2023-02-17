@@ -1731,6 +1731,12 @@
         text-align: center;
     }
 
+    .ellya_widad .first_page #marry_date_tasyakur {
+        width: 75%;
+        font-size: calc(14px + 2vmin);
+        text-align: center;
+    }
+
     .ellya_widad .seventh_page .sparkle_2 {
         position: absolute;
         bottom: 10%;
