@@ -385,7 +385,6 @@ function EllyaWidad(props) {
                     <img src={DaunPembatas} className='icon_pembatas animate_on_scroll'/>
                     <p className='location animate_on_scroll'>Masjid Al-Kautsar</p>
                     <p className='location_detail animate_on_scroll'>Komplek Sukamenak Indah Blok K, Kecamatan Margahayu, Kabupaten Bandung, Jawa Barat</p>
-                    <button className='btn_direction animate_on_scroll' onClick={ShowAkadMap}>Lihat Petunjuk Arah</button>
                 </div>
             </div>
         </div>
