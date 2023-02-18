@@ -427,7 +427,7 @@ function EllyaWidad(props) {
             {akadShown ?
                 (
                 <div class="resepsi_canvas" id='akad_canvas'>
-                    <iframe class="resepsi_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=masjid%20al%20kautsar%20sukamenak&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+                    <iframe class="resepsi_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=masjid%20al-kautsar%20sukamenak%20indah&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
                 </div>
                 ) : ''
             }

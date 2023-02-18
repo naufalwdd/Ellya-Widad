@@ -68,6 +68,7 @@ function EllyaWidad(props) {
     var [presence, setPresence] = useState('ya')
     var [totalGuest, setTotalGuest] = useState('1')
     var [message, setMessage] = useState('')
+    var [akadShown, setAkadShown] = useState(false)
     var [ucapan, setUcapan] = useState([])
     var [dresscode, setDresscode] = useState(true)
 
@@ -223,11 +224,13 @@ function EllyaWidad(props) {
     }
 
     const ShowAkadMap = () => {
+        setAkadShown(true)
         setResepsiShown(false)
         ScrollToMap()
     }
 
     const ShowResepsiMap = () => {
+        setAkadShown(false)
         setResepsiShown(true)
         ScrollToMap()
     }
@@ -363,17 +366,26 @@ function EllyaWidad(props) {
         <div className="forth_page">
             <img src={DaunAkad} alt="" className='daun_akad'/>
             <img src={DaunAkad2} alt="" className='daun_akad2'/>
-            <div className='card_wrapper card_wrapper_center'>
+            <div className='card_wrapper'>
                 <div className="card_item animate_on_scroll">
                     <img src={IconResepsi} className='icon_akad animate_on_scroll' />
                     <p className='akad_title animate_on_scroll'>Tasyakur Pernikahan</p>
                     <p className='animate_on_scroll'>Selasa, 28 Februari 2023</p>
                     <p className='time animate_on_scroll'>10.00 - 13.00 WIB</p>
                     <img src={DaunPembatas} className='icon_pembatas animate_on_scroll'/>
-                    <p className='location animate_on_scroll'>Kediaman Orang Tua </p>
-                    <p className='location animate_on_scroll' style={{marginBottom: '10px'}}>Mempelai Pria</p>
+                    <p className='location animate_on_scroll'>Kediaman Orang Tua Mempelai Pria</p>
                     <p className='location_detail animate_on_scroll'>Jalan Talun No. 2, RT/RW 01/03, Kelurahan Regol Wetan, Kecamatan Sumedang Selatan, Kabupaten Sumedang, Jawa Barat</p>
                     <button className='btn_direction animate_on_scroll' onClick={ShowResepsiMap}>Lihat Petunjuk Arah</button>
+                </div>
+                <div className="card_item animate_on_scroll">
+                    <img src={IconAkad} className='icon_akad animate_on_scroll' />
+                    <p className='akad_title animate_on_scroll'>Akad Nikah</p>
+                    <p className='animate_on_scroll'>Jum'at, 3 Maret 2023</p>
+                    <p className='time animate_on_scroll'>08.00 - 10.00 WIB</p>
+                    <img src={DaunPembatas} className='icon_pembatas animate_on_scroll'/>
+                    <p className='location animate_on_scroll'>Masjid Al-Kautsar</p>
+                    <p className='location_detail animate_on_scroll'>Komplek Sukamenak Indah Blok K, Kecamatan Margahayu, Kabupaten Bandung, Jawa Barat</p>
+                    <button className='btn_direction animate_on_scroll' onClick={ShowAkadMap}>Lihat Petunjuk Arah</button>
                 </div>
             </div>
         </div>
@@ -386,11 +398,18 @@ function EllyaWidad(props) {
                 </div>
                 ) : ''
             }
+            {akadShown ?
+                (
+                <div class="resepsi_canvas" id='akad_canvas'>
+                    <iframe class="resepsi_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=masjid%20al-kautsar%20sukamenak%20indah&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+                </div>
+                ) : ''
+            }
         </div>
         <div className="sixth_page">
             <img src={SparkleCream} className='sparkle_kiri'/>
             <img src={SparkleCream} className='sparkle_kanan'/>
-            <p className='countdown animate_on_scroll'>Menuju Hari Yang Ditunggu</p>
+            <p className='countdown animate_on_scroll'>Waktu Menuju Tasyakuran</p>
             <div className="countdown_wrapper animate_on_scroll">
                 <div className="countdown_line"></div>
                 <TimerTasyakur></TimerTasyakur>
