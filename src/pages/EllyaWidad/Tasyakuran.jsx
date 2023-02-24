@@ -401,12 +401,12 @@ function EllyaWidad(props) {
             <form onSubmit={e => {
             e.preventDefault();
             atcb_action({
-                name:'Resepsi Pernikahan Ellya & Widad',
-                startDate: "2023-03-04",
-                endDate: "2023-03-04",
-                startTime: "03:00",
-                endTime: "06:00",
-                location: "Kopo Square",
+                name:'Tasyakur Pernikahan Ellya & Widad',
+                startDate: "2023-02-28",
+                endDate: "2023-02-28",
+                startTime: time == null ? "10:00" : "13:00",
+                endTime: time == null ? "13:00" : "15:00",
+                location: "Jl. Talun No. 2, Sumedang",
                 options: ['Google', 'Yahoo'],
                 iCalFileName: "Reminder-Event",
             });
