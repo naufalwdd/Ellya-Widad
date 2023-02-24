@@ -72,6 +72,8 @@ function EllyaWidad(props) {
     var [ucapan, setUcapan] = useState([])
     var [dresscode, setDresscode] = useState(true)
 
+    var [time, setTime] = useState(1)
+
     const PresenceChange = event => {
         setPresence(event.target.value);
         document.getElementById('jumlah_input').disabled = event.target.value == 'ya' ? false : true
@@ -125,7 +127,9 @@ function EllyaWidad(props) {
             document.title = 'Pernikahan Ellya & Widad';
             const urlParams = new URLSearchParams(queryString);
             const guest = urlParams.get('to')
+            const time_type = urlParams.get('t')
             guest == null ? setGuestName('Bapak/Ibu/Saudara/Saudari') : setGuestName(guest)
+            time_type == null ? setTime(1) : setTime(2)
             atcb_init()
             GetRSVPData()
             GetDresscodeData(guest)
@@ -183,9 +187,6 @@ function EllyaWidad(props) {
         document.getElementById('first_page_title_img').style.animation = 'fadeIn 3.25s'
         document.getElementById('our_name_img').style.animation = 'fadeIn 3.25s'
         document.getElementById('marry_date_tasyakur').style.animation = 'fadeIn 3.25s'
-        document.getElementById('navigation').style.animation = 'fadeIn2 2s'
-        document.getElementById("navigation").style.animationFillMode = 'forwards'
-        document.getElementById('navigation').style.display = 'flex'
     }
 
     const ScrollToMap = () => {
@@ -256,24 +257,6 @@ function EllyaWidad(props) {
 
     return(
     <div className="ellya_widad" id="ellya_widad">
-        <div className="navigation" id='navigation'>
-            <div className='nav_btn nav_btn_1' onClick={ScrollToHome}>
-                <img src={Home} alt="" />
-                <div className="garis" id='garis_home'></div>
-            </div>
-            <div className='nav_btn' onClick={ScrollToProfile}>
-                <img src={Brides} alt="" />
-                <div className="garis" id='garis_brides'></div>
-            </div>
-            <div className='nav_btn' onClick={ScrollToProtocol}> 
-                <img src={Warning} alt="" />
-                <div className="garis" id='garis_warning'></div>
-            </div>
-            <div className='nav_btn nav_btn_4' onClick={ScrollToChat}>
-                <img src={Chat} alt="" />
-                <div className="garis" id='garis_chat'></div>
-            </div>
-        </div>
         <Sound
             url={SepertigaMalam}
             playStatus={isPlaying == true ? Sound.status.PLAYING : Sound.status.STOPPED}
@@ -371,7 +354,7 @@ function EllyaWidad(props) {
                     <img src={IconResepsi} className='icon_akad animate_on_scroll' />
                     <p className='akad_title animate_on_scroll'>Tasyakur Pernikahan</p>
                     <p className='animate_on_scroll'>Selasa, 28 Februari 2023</p>
-                    <p className='time animate_on_scroll'>10.00 - 13.00 WIB</p>
+                    <p className='time animate_on_scroll'>{time == 1 ? '10.00 - 13.00 WIB' : '13.00 - 15.00'}</p>
                     <img src={DaunPembatas} className='icon_pembatas animate_on_scroll'/>
                     <p className='location animate_on_scroll'>Kediaman Orang Tua Mempelai Pria</p>
                     <p className='location_detail animate_on_scroll'>Jalan Talun No. 2, RT/RW 01/03, Kelurahan Regol Wetan, Kecamatan Sumedang Selatan, Kabupaten Sumedang, Jawa Barat</p>
