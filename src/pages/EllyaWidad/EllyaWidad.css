@@ -579,6 +579,11 @@
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
 }
 
+.ellya_widad .forth_page .small_card {
+    height: 85%;
+    width: 32.5%;
+}
+
 .ellya_widad .forth_page .icon_akad {
     width: 30%;
     margin-bottom: 15px;
@@ -620,6 +625,12 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.ellya_widad .card_wrapper .small_button {
+    font-size: 14px;
+    height: 30px;
+    border-radius: 5px;
+}
+
 .ellya_widad .card_wrapper .btn_direction:hover {
     cursor: pointer;
     background-color: #976a58;
@@ -632,10 +643,31 @@
     font-weight: 700;
 }
 
+.ellya_widad .forth_page .card_title_small {
+    font-size: 22px;
+}
+
+.ellya_widad .forth_page .time_small {
+    font-size: 16px;
+}
+
+.ellya_widad .forth_page .location_small {
+    font-size: 18px;
+}
+
+.ellya_widad .forth_page .address_small {
+    font-size: 14px;
+}
+
 .ellya_widad .forth_page .icon_pembatas {
     width: 90%;
     margin-top: -110px;
     margin-bottom: -90px;
+}
+
+.ellya_widad .forth_page .remove_margin_pembatas {
+    margin-top: -75px;
+    margin-bottom: -65px;
 }
 
 .ellya_widad .fifth_page {

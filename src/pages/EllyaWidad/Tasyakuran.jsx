@@ -349,26 +349,36 @@ function EllyaWidad(props) {
         <div className="forth_page">
             <img src={DaunAkad} alt="" className='daun_akad'/>
             <img src={DaunAkad2} alt="" className='daun_akad2'/>
-            <div className='card_wrapper'>
-                <div className="card_item animate_on_scroll">
+            <div className='card_wrapper flex_wrap dir_col'>
+                <div className="card_item animate_on_scroll small_card">
                     <img src={IconResepsi} className='icon_akad animate_on_scroll' />
-                    <p className='akad_title animate_on_scroll'>Tasyakur Pernikahan</p>
-                    <p className='animate_on_scroll'>Selasa, 28 Februari 2023</p>
-                    <p className='time animate_on_scroll'>{time == 1 ? '10.00 - 13.00 WIB' : '13.00 - 15.00'}</p>
-                    <img src={DaunPembatas} className='icon_pembatas animate_on_scroll'/>
-                    <p className='location animate_on_scroll'>Kediaman Orang Tua Mempelai Pria</p>
-                    <p className='location_detail animate_on_scroll'>Jalan Talun No. 2, RT/RW 01/03, Kelurahan Regol Wetan, Kecamatan Sumedang Selatan, Kabupaten Sumedang, Jawa Barat</p>
-                    <button className='btn_direction animate_on_scroll' onClick={ShowResepsiMap}>Lihat Petunjuk Arah</button>
+                    <p className='akad_title animate_on_scroll card_title_small'>Tasyakur Pernikahan</p>
+                    <p className='animate_on_scroll time_small'>Selasa, 28 Februari 2023</p>
+                    <p className='time animate_on_scroll time_small'>{time == 1 ? '10.00 - 13.00 WIB' : '13.00 - 15.00'}</p>
+                    <img src={DaunPembatas} className='icon_pembatas animate_on_scroll remove_margin_pembatas'/>
+                    <p className='location animate_on_scroll location_small'>Kediaman Orang Tua Mempelai Pria</p>
+                    <p className='location_detail animate_on_scroll address_small'>Jalan Talun No. 2, RT/RW 01/03, Kelurahan Regol Wetan, Kecamatan Sumedang Selatan, Kabupaten Sumedang, Jawa Barat</p>
+                    <button className='btn_direction animate_on_scroll small_button' onClick={ShowResepsiMap}>Lihat Petunjuk Arah</button>
                 </div>
-                <div className="card_item animate_on_scroll">
+                <div className="card_item animate_on_scroll small_card">
                     <img src={IconAkad} className='icon_akad animate_on_scroll' />
-                    <p className='akad_title animate_on_scroll'>Akad Nikah</p>
-                    <p className='animate_on_scroll'>Jum'at, 3 Maret 2023</p>
-                    <p className='time animate_on_scroll'>08.00 - 10.00 WIB</p>
-                    <img src={DaunPembatas} className='icon_pembatas animate_on_scroll'/>
-                    <p className='location animate_on_scroll'>Masjid Al-Kautsar</p>
-                    <p className='location_detail animate_on_scroll'>Komplek Sukamenak Indah Blok K, Kecamatan Margahayu, Kabupaten Bandung, Jawa Barat</p>
+                    <p className='akad_title animate_on_scroll card_title_small'>Akad Nikah</p>
+                    <p className='animate_on_scroll time_small'>Jum'at, 3 Maret 2023</p>
+                    <p className='time animate_on_scroll time_small'>08.00 - 10.00 WIB</p>
+                    <img src={DaunPembatas} className='icon_pembatas animate_on_scroll remove_margin_pembatas'/>
+                    <p className='location animate_on_scroll location_small'>Masjid Al-Kautsar</p>
+                    <p className='location_detail animate_on_scroll address_small'>Komplek Sukamenak Indah Blok K, Kecamatan Margahayu, Kabupaten Bandung, Jawa Barat</p>
                 </div>
+                {time != 1 ? (<div className="card_item animate_on_scroll self_centered small_card">
+                    <img src={IconResepsi} className='icon_akad animate_on_scroll' />
+                    <p className='akad_title animate_on_scroll card_title_small'>Resepsi</p>
+                    <p className='animate_on_scroll time_small'>Sabtu, 4 Maret 2023</p>
+                    <p className='time animate_on_scroll time_small'>10.00 - 13.00 WIB</p>
+                    <img src={DaunPembatas} className='icon_pembatas animate_on_scroll remove_margin_pembatas'/>
+                    <p className='location animate_on_scroll location_small'>Hall A</p>
+                    <p className='location animate_on_scroll location_small'>La Gardena Kopo Square</p>
+                    <p className='location_detail animate_on_scroll address_small'>Jalan Raya Kopo Sayati No.45, Sayati, Kecamatan Margahayu, Kabupaten Bandung, Jawa Barat</p>
+                </div>) : '' }
             </div>
         </div>
         <div className="fifth_page">
