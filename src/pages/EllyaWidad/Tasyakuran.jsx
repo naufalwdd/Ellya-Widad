@@ -18,6 +18,7 @@ import DaunPembatas from '../../assets/daun-pembatas.png'
 import ProfileEllya from '../../assets/profile-ellya.JPG'
 import ProfileWidad from '../../assets/profile-widad.JPG'
 import TimerTasyakur from '../../components/TimerTasyakur';
+import Timer from '../../components/Timer';
 import CountdownFrame from '../../assets/countdown-frame.png'
 import Prokes1 from '../../assets/prokes1.png'
 import Prokes2 from '../../assets/prokes2.svg'
@@ -63,6 +64,7 @@ function EllyaWidad(props) {
     var [guestName, setGuestName] = useState('')
     var [isPlaying, setIsPlaying] = useState(false)
     var [resepsiShown, setResepsiShown] = useState(false)
+    var [resepsiShown2, setResepsiShown2] = useState(false)
 
     var [name, setName] = useState('')
     var [presence, setPresence] = useState('ya')
@@ -227,12 +229,21 @@ function EllyaWidad(props) {
     const ShowAkadMap = () => {
         setAkadShown(true)
         setResepsiShown(false)
+        setResepsiShown2(false)
         ScrollToMap()
     }
 
     const ShowResepsiMap = () => {
         setAkadShown(false)
         setResepsiShown(true)
+        setResepsiShown2(false)
+        ScrollToMap()
+    }
+
+    const ShowResepsiMap2 = () => {
+        setAkadShown(false)
+        setResepsiShown(false)
+        setResepsiShown2(true)
         ScrollToMap()
     }
 
@@ -270,13 +281,13 @@ function EllyaWidad(props) {
         </div>
         <div className="first_page">
             {/* <img src={FirstPageTitle} className='first_page_title_img' id='first_page_title_img'/> */}
-            <p className="first_page_title_img" id="first_page_title_img" style={{ marginTop: '120px', textAlign: 'center' }}>Tasyakur Pernikahan</p>
+            <p className="first_page_title_img" id="first_page_title_img" style={{ marginTop: '120px', textAlign: 'center' }}>{time == 2 ? 'Pernikahan' : 'Tasyakur Pernikahan'}</p>
             <picture>
                 <source media="(min-width: 720px)" srcSet={OurName}/>
                 <source media="(max-width: 720px)" srcSet={OurNamePortrait}/>
                 <img src="OtherImage.png" alt="PictureDoesNotMatchAny" id='our_name_img'></img>
             </picture>
-            <p id='marry_date_tasyakur'>28 Februari 2023</p>
+            <p id='marry_date_tasyakur'>{time == 2 ? '' : '28 Februari 2023'}</p>
             <img src={BottomPaper} className='bottom_paper_img'/>
             <img src={Daun1} className='daun_1'/>
             <img src={Daun2} className='daun_2'/>
@@ -368,6 +379,7 @@ function EllyaWidad(props) {
                     <img src={DaunPembatas} className='icon_pembatas animate_on_scroll remove_margin_pembatas'/>
                     <p className='location animate_on_scroll location_small'>Masjid Al-Kautsar</p>
                     <p className='location_detail animate_on_scroll address_small'>Komplek Sukamenak Indah Blok K, Kecamatan Margahayu, Kabupaten Bandung, Jawa Barat</p>
+                    <button className='btn_direction animate_on_scroll' onClick={ShowAkadMap}>Lihat Petunjuk Arah</button>
                 </div>
                 {time != 1 ? (<div className="card_item animate_on_scroll self_centered small_card">
                     <img src={IconResepsi} className='icon_akad animate_on_scroll' />
@@ -378,6 +390,7 @@ function EllyaWidad(props) {
                     <p className='location animate_on_scroll location_small'>Hall A</p>
                     <p className='location animate_on_scroll location_small'>La Gardena Kopo Square</p>
                     <p className='location_detail animate_on_scroll address_small'>Jalan Raya Kopo Sayati No.45, Sayati, Kecamatan Margahayu, Kabupaten Bandung, Jawa Barat</p>
+                    <button className='btn_direction animate_on_scroll' onClick={ShowResepsiMap2}>Lihat Petunjuk Arah</button>
                 </div>) : '' }
             </div>
         </div>
@@ -397,26 +410,33 @@ function EllyaWidad(props) {
                 </div>
                 ) : ''
             }
+            {resepsiShown2 ?
+                (
+                <div class="resepsi_canvas" id='resepsi_canvas'>
+                    <iframe class="resepsi_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=kopo square&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                </div>
+                ) : ''
+            }
         </div>
         <div className="sixth_page">
             <img src={SparkleCream} className='sparkle_kiri'/>
             <img src={SparkleCream} className='sparkle_kanan'/>
-            <p className='countdown animate_on_scroll'>Waktu Menuju Tasyakuran</p>
+            <p className='countdown animate_on_scroll'>{time == 2 ? 'Waktu Menuju Resepsi' : 'Waktu Menuju Tasyakuran'}</p>
             <div className="countdown_wrapper animate_on_scroll">
                 <div className="countdown_line"></div>
-                <TimerTasyakur></TimerTasyakur>
+                {time == 2 ? (<Timer></Timer>) : (<TimerTasyakur></TimerTasyakur>)}
                 <div className="countdown_line"></div>
                 <img src={CountdownFrame} alt="" className='countdown_frame'/>
             </div>
             <form onSubmit={e => {
             e.preventDefault();
             atcb_action({
-                name:'Tasyakur Pernikahan Ellya & Widad',
-                startDate: "2023-02-28",
-                endDate: "2023-02-28",
-                startTime: time == null ? "10:00" : "13:00",
-                endTime: time == null ? "13:00" : "15:00",
-                location: "Jl. Talun No. 2, Sumedang",
+                name:'Pernikahan Ellya & Widad',
+                startDate: "2023-03-04",
+                endDate: "2023-03-04",
+                startTime: "10:00",
+                endTime: "13:00",
+                location: "Hall A, La Gardena Kopo Square",
                 options: ['Google', 'Yahoo'],
                 iCalFileName: "Reminder-Event",
             });
