@@ -1588,6 +1588,10 @@
         align-items: center;
     }
 
+    .ellya_widad .forth_page .dir_col {
+        height: 100%;
+    }
+
     .ellya_widad .forth_page .card_item {
         width: 85vw;
         margin-bottom: 20px;
